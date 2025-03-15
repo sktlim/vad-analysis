@@ -1,0 +1,25 @@
+name: vad-analysis
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.10
+  - numpy
+  - scipy
+  - pandas
+  - scikit-learn
+  - ffmpeg
+  - pip
+  - pip:
+      - pyannote-audio
+      - pyannote-core
+      - pyannote-database
+      - pyannote-metrics
+      - pyannote-pipeline
+      - silero-vad
+      - torch
+      - torchaudio
+      - pytorch-lightning
+      - sentencepiece
+      - speechbrain
+      - webrtcvad

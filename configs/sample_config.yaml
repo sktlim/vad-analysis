@@ -1,0 +1,5 @@
+vad_model: "silero"
+sample_rate: 16000
+chunk_size: 5
+overlap: 1
+AUTH_TOKEN: ""
