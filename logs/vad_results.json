@@ -1,2827 +1,2415 @@
 {
     "overall_stats": {
-        "total_chunks_processed": 206,
-        "total_runtime": 16.6548,
-        "avg_processing_time_per_chunk": 0.0808,
-        "total_speech_detected": 699.82,
+        "total_chunks_processed": 154,
+        "total_runtime": 14.3033,
+        "avg_processing_time_per_chunk": 0.0929,
+        "total_speech_detected": 634.31,
         "metrics": {
-            "detection_accuracy": 0.5018,
-            "detection_error_rate": 1.0697,
-            "missed_detection_rate": 0.3029,
-            "false_alarm_rate": 0.7667,
-            "roc_auc": 0.5147
+            "detection_accuracy": 0.0,
+            "detection_error_rate": 0.0,
+            "missed_detection_rate": 0.0,
+            "false_alarm_rate": 0.0,
+            "roc_auc": 0.0
         }
     },
     "chunk_logs": [
         {
-            "chunk_start_time": 5.0,
-            "processing_time": 0.093,
+            "chunk_start_time": 4.0,
+            "processing_time": 0.105,
             "detected_speech_segments": [
                 [
                     0.41909375000000004,
-                    3.33846875
-                ]
-            ],
-            "speech_duration": 2.92
-        },
-        {
-            "chunk_start_time": 10.0,
-            "processing_time": 0.081,
-            "detected_speech_segments": [
-                [
-                    5.03096875,
-                    5.35159375
+                    3.3215937500000003
                 ],
                 [
-                    6.60034375,
-                    9.04721875
+                    4.620968749999999,
+                    5.0259687500000005
                 ]
             ],
-            "speech_duration": 2.77
+            "speech_duration": 3.31
         },
         {
-            "chunk_start_time": 15.0,
-            "processing_time": 0.08,
+            "chunk_start_time": 8.0,
+            "processing_time": 0.091,
             "detected_speech_segments": [
                 [
-                    10.03096875,
-                    13.119093750000001
+                    4.63846875,
+                    9.02596875
                 ]
             ],
-            "speech_duration": 3.09
+            "speech_duration": 4.39
         },
         {
-            "chunk_start_time": 20.0,
-            "processing_time": 0.079,
+            "chunk_start_time": 12.0,
+            "processing_time": 0.0893,
             "detected_speech_segments": [
                 [
-                    16.00971875,
-                    16.83659375
+                    8.03096875,
+                    9.09409375
                 ],
                 [
-                    17.950343750000002,
-                    19.064093749999998
-                ]
-            ],
-            "speech_duration": 1.94
-        },
-        {
-            "chunk_start_time": 25.0,
-            "processing_time": 0.083,
-            "detected_speech_segments": [
-                [
-                    20.03096875,
-                    22.41034375
+                    10.02221875,
+                    10.81534375
                 ],
                 [
-                    23.20346875,
-                    24.08096875
-                ]
-            ],
-            "speech_duration": 3.26
-        },
-        {
-            "chunk_start_time": 30.0,
-            "processing_time": 0.081,
-            "detected_speech_segments": [
-                [
-                    25.21659375,
-                    27.78159375
-                ]
-            ],
-            "speech_duration": 2.56
-        },
-        {
-            "chunk_start_time": 35.0,
-            "processing_time": 0.084,
-            "detected_speech_segments": [
-                [
-                    31.22909375,
-                    32.49471875
-                ],
-                [
-                    33.00096875,
-                    34.06409375
-                ]
-            ],
-            "speech_duration": 2.33
-        },
-        {
-            "chunk_start_time": 40.0,
-            "processing_time": 0.08,
-            "detected_speech_segments": [
-                [
-                    35.33471875,
-                    36.85346875
-                ],
-                [
-                    37.29221875,
-                    39.03034375
-                ]
-            ],
-            "speech_duration": 3.26
-        },
-        {
-            "chunk_start_time": 45.0,
-            "processing_time": 0.081,
-            "detected_speech_segments": [
-                [
-                    40.03096875,
-                    41.38096875
-                ],
-                [
-                    41.95471875,
-                    43.81096875
-                ]
-            ],
-            "speech_duration": 3.21
-        },
-        {
-            "chunk_start_time": 50.0,
-            "processing_time": 0.08,
-            "detected_speech_segments": [
-                [
-                    45.03096875,
-                    45.79034375
-                ],
-                [
-                    46.54971875,
-                    47.57909375
-                ],
-                [
-                    48.62534375,
-                    49.09784375
-                ]
-            ],
-            "speech_duration": 2.26
-        },
-        {
-            "chunk_start_time": 55.0,
-            "processing_time": 0.0801,
-            "detected_speech_segments": [
-                [
-                    50.60471875,
-                    52.71409375
-                ],
-                [
-                    53.91221875,
-                    54.03034375
-                ]
-            ],
-            "speech_duration": 2.23
-        },
-        {
-            "chunk_start_time": 60.0,
-            "processing_time": 0.079,
-            "detected_speech_segments": [
-                [
-                    55.89159375,
-                    58.99659375
-                ]
-            ],
-            "speech_duration": 3.11
-        },
-        {
-            "chunk_start_time": 65.0,
-            "processing_time": 0.08,
-            "detected_speech_segments": [
-                [
-                    60.63846875,
-                    64.03034375
-                ]
-            ],
-            "speech_duration": 3.39
-        },
-        {
-            "chunk_start_time": 70.0,
-            "processing_time": 0.079,
-            "detected_speech_segments": [
-                [
-                    65.03096875,
-                    66.02659375
-                ],
-                [
-                    67.25846875,
-                    67.69721875
-                ],
-                [
-                    67.95034375,
-                    69.01346875
-                ]
-            ],
-            "speech_duration": 2.5
-        },
-        {
-            "chunk_start_time": 75.0,
-            "processing_time": 0.082,
-            "detected_speech_segments": [
-                [
-                    70.03096875,
-                    74.03034375
-                ]
-            ],
-            "speech_duration": 4.0
-        },
-        {
-            "chunk_start_time": 80.0,
-            "processing_time": 0.08,
-            "detected_speech_segments": [
-                [
-                    75.03096875,
-                    77.42721875
-                ],
-                [
-                    78.00096875,
-                    78.96284375
-                ]
-            ],
-            "speech_duration": 3.36
-        },
-        {
-            "chunk_start_time": 85.0,
-            "processing_time": 0.08,
-            "detected_speech_segments": [
-                [
-                    80.03096875,
-                    83.42284375
-                ]
-            ],
-            "speech_duration": 3.39
-        },
-        {
-            "chunk_start_time": 90.0,
-            "processing_time": 0.08,
-            "detected_speech_segments": [
-                [
-                    85.03096875,
-                    85.45284375
-                ],
-                [
-                    86.22909375,
-                    88.94596875
-                ]
-            ],
-            "speech_duration": 3.14
-        },
-        {
-            "chunk_start_time": 95.0,
-            "processing_time": 0.081,
-            "detected_speech_segments": [
-                [
-                    90.03096875,
-                    90.92534375
-                ],
-                [
-                    91.36409375,
-                    93.40596875
+                    11.94596875,
+                    13.02596875
                 ]
             ],
             "speech_duration": 2.94
         },
         {
-            "chunk_start_time": 100.0,
-            "processing_time": 0.0861,
-            "detected_speech_segments": [
-                [
-                    95.03096875,
-                    95.57096875
-                ],
-                [
-                    95.87471875,
-                    97.93346875
-                ],
-                [
-                    98.43971875,
-                    99.03034375
-                ]
-            ],
-            "speech_duration": 3.19
-        },
-        {
-            "chunk_start_time": 105.0,
-            "processing_time": 0.0891,
-            "detected_speech_segments": [
-                [
-                    100.43596875,
-                    101.43159375
-                ],
-                [
-                    102.17409375,
-                    104.06409375
-                ]
-            ],
-            "speech_duration": 2.89
-        },
-        {
-            "chunk_start_time": 110.0,
-            "processing_time": 0.0821,
-            "detected_speech_segments": [
-                [
-                    105.03096875,
-                    109.08096875
-                ]
-            ],
-            "speech_duration": 4.05
-        },
-        {
-            "chunk_start_time": 115.0,
-            "processing_time": 0.08,
-            "detected_speech_segments": [
-                [
-                    110.36846875,
-                    112.79846875
-                ],
-                [
-                    112.86596875,
-                    114.04721875
-                ]
-            ],
-            "speech_duration": 3.61
-        },
-        {
-            "chunk_start_time": 120.0,
-            "processing_time": 0.08,
-            "detected_speech_segments": [
-                [
-                    115.03096875,
-                    118.00096875
-                ],
-                [
-                    118.59159375,
-                    119.04721875
-                ]
-            ],
-            "speech_duration": 3.43
-        },
-        {
-            "chunk_start_time": 125.0,
-            "processing_time": 0.083,
-            "detected_speech_segments": [
-                [
-                    120.60471875,
-                    124.09784375
-                ]
-            ],
-            "speech_duration": 3.49
-        },
-        {
-            "chunk_start_time": 130.0,
-            "processing_time": 0.08,
-            "detected_speech_segments": [
-                [
-                    125.03096875,
-                    129.06409375
-                ]
-            ],
-            "speech_duration": 4.03
-        },
-        {
-            "chunk_start_time": 135.0,
-            "processing_time": 0.081,
-            "detected_speech_segments": [
-                [
-                    130.03096875,
-                    130.04784375
-                ],
-                [
-                    130.08159375,
-                    134.09784375
-                ]
-            ],
-            "speech_duration": 4.03
-        },
-        {
-            "chunk_start_time": 140.0,
-            "processing_time": 0.0896,
-            "detected_speech_segments": [
-                [
-                    135.03096875,
-                    138.43971875
-                ]
-            ],
-            "speech_duration": 3.41
-        },
-        {
-            "chunk_start_time": 145.0,
-            "processing_time": 0.082,
-            "detected_speech_segments": [
-                [
-                    140.03096875,
-                    140.40221875
-                ],
-                [
-                    141.09409375,
-                    144.09784375
-                ]
-            ],
-            "speech_duration": 3.38
-        },
-        {
-            "chunk_start_time": 150.0,
-            "processing_time": 0.085,
-            "detected_speech_segments": [
-                [
-                    145.03096875,
-                    147.54534375
-                ],
-                [
-                    147.76471875,
-                    149.03034375
-                ]
-            ],
-            "speech_duration": 3.78
-        },
-        {
-            "chunk_start_time": 155.0,
-            "processing_time": 0.0796,
-            "detected_speech_segments": [
-                [
-                    150.03096875,
-                    151.11096875
-                ],
-                [
-                    151.49909375,
-                    154.03034375
-                ]
-            ],
-            "speech_duration": 3.61
-        },
-        {
-            "chunk_start_time": 160.0,
-            "processing_time": 0.081,
-            "detected_speech_segments": [
-                [
-                    155.03096875,
-                    159.08096875
-                ]
-            ],
-            "speech_duration": 4.05
-        },
-        {
-            "chunk_start_time": 165.0,
-            "processing_time": 0.083,
-            "detected_speech_segments": [
-                [
-                    160.03096875,
-                    162.57909375
-                ],
-                [
-                    163.20346875,
-                    164.04721875
-                ]
-            ],
-            "speech_duration": 3.39
-        },
-        {
-            "chunk_start_time": 170.0,
-            "processing_time": 0.082,
-            "detected_speech_segments": [
-                [
-                    165.14909375,
-                    169.06409375
-                ]
-            ],
-            "speech_duration": 3.92
-        },
-        {
-            "chunk_start_time": 175.0,
-            "processing_time": 0.081,
-            "detected_speech_segments": [
-                [
-                    170.03096875,
-                    174.04721875
-                ]
-            ],
-            "speech_duration": 4.02
-        },
-        {
-            "chunk_start_time": 180.0,
-            "processing_time": 0.084,
-            "detected_speech_segments": [
-                [
-                    175.03096875,
-                    179.06409375
-                ]
-            ],
-            "speech_duration": 4.03
-        },
-        {
-            "chunk_start_time": 185.0,
-            "processing_time": 0.083,
-            "detected_speech_segments": [
-                [
-                    180.03096875,
-                    184.04721875
-                ]
-            ],
-            "speech_duration": 4.02
-        },
-        {
-            "chunk_start_time": 190.0,
-            "processing_time": 0.08,
-            "detected_speech_segments": [
-                [
-                    185.03096875,
-                    187.47784375
-                ],
-                [
-                    187.57909375,
-                    189.08096875
-                ]
-            ],
-            "speech_duration": 3.95
-        },
-        {
-            "chunk_start_time": 195.0,
-            "processing_time": 0.08,
-            "detected_speech_segments": [
-                [
-                    190.03096875,
-                    194.06409375
-                ]
-            ],
-            "speech_duration": 4.03
-        },
-        {
-            "chunk_start_time": 200.0,
-            "processing_time": 0.081,
-            "detected_speech_segments": [
-                [
-                    195.03096875,
-                    197.66346875
-                ],
-                [
-                    198.64221875,
-                    199.04721875
-                ]
-            ],
-            "speech_duration": 3.04
-        },
-        {
-            "chunk_start_time": 205.0,
-            "processing_time": 0.081,
-            "detected_speech_segments": [
-                [
-                    200.70596875,
-                    201.54971875
-                ],
-                [
-                    202.51159375,
-                    203.99659375
-                ]
-            ],
-            "speech_duration": 2.33
-        },
-        {
-            "chunk_start_time": 210.0,
-            "processing_time": 0.08,
-            "detected_speech_segments": [
-                [
-                    205.03096875,
-                    206.00971875
-                ],
-                [
-                    206.44846875,
-                    209.03034375
-                ]
-            ],
-            "speech_duration": 3.56
-        },
-        {
-            "chunk_start_time": 215.0,
-            "processing_time": 0.08,
-            "detected_speech_segments": [
-                [
-                    210.03096875,
-                    212.68034375
-                ],
-                [
-                    213.28784375,
-                    214.04721875
-                ]
-            ],
-            "speech_duration": 3.41
-        },
-        {
-            "chunk_start_time": 220.0,
-            "processing_time": 0.079,
-            "detected_speech_segments": [
-                [
-                    215.43596875,
-                    218.59159375
-                ]
-            ],
-            "speech_duration": 3.16
-        },
-        {
-            "chunk_start_time": 225.0,
-            "processing_time": 0.079,
-            "detected_speech_segments": [
-                [
-                    220.03096875,
-                    220.62159375
-                ],
-                [
-                    221.48221875,
-                    224.04721875
-                ]
-            ],
-            "speech_duration": 3.16
-        },
-        {
-            "chunk_start_time": 230.0,
-            "processing_time": 0.081,
-            "detected_speech_segments": [
-                [
-                    225.03096875,
-                    226.81971875
-                ],
-                [
-                    227.59596875,
-                    228.65909375
-                ]
-            ],
-            "speech_duration": 2.85
-        },
-        {
-            "chunk_start_time": 235.0,
-            "processing_time": 0.0808,
-            "detected_speech_segments": [
-                [
-                    231.36409375,
-                    234.08096875
-                ]
-            ],
-            "speech_duration": 2.72
-        },
-        {
-            "chunk_start_time": 240.0,
-            "processing_time": 0.0805,
-            "detected_speech_segments": [
-                [
-                    235.03096875,
-                    236.63409375
-                ],
-                [
-                    236.75221875,
-                    239.03034375
-                ]
-            ],
-            "speech_duration": 3.88
-        },
-        {
-            "chunk_start_time": 245.0,
-            "processing_time": 0.0799,
-            "detected_speech_segments": [
-                [
-                    240.03096875,
-                    241.29659375
-                ],
-                [
-                    241.81971875,
-                    243.64221875
-                ]
-            ],
-            "speech_duration": 3.09
-        },
-        {
-            "chunk_start_time": 250.0,
-            "processing_time": 0.081,
-            "detected_speech_segments": [
-                [
-                    245.03096875,
-                    245.68909375
-                ],
-                [
-                    246.16159375,
-                    246.33034375
-                ],
-                [
-                    246.38096875,
-                    249.04721875
-                ]
-            ],
-            "speech_duration": 3.49
-        },
-        {
-            "chunk_start_time": 255.0,
-            "processing_time": 0.08,
-            "detected_speech_segments": [
-                [
-                    250.03096875,
-                    254.04721875
-                ]
-            ],
-            "speech_duration": 4.02
-        },
-        {
-            "chunk_start_time": 260.0,
-            "processing_time": 0.079,
-            "detected_speech_segments": [
-                [
-                    255.03096875,
-                    255.04784375
-                ],
-                [
-                    255.21659375,
-                    256.49909375
-                ],
-                [
-                    256.80284375,
-                    259.08096875
-                ]
-            ],
-            "speech_duration": 3.58
-        },
-        {
-            "chunk_start_time": 265.0,
-            "processing_time": 0.0792,
-            "detected_speech_segments": [
-                [
-                    260.03096875,
-                    260.36846875
-                ],
-                [
-                    260.79034375,
-                    264.06409375
-                ]
-            ],
-            "speech_duration": 3.61
-        },
-        {
-            "chunk_start_time": 270.0,
-            "processing_time": 0.079,
-            "detected_speech_segments": [
-                [
-                    265.03096875,
-                    265.04784375
-                ],
-                [
-                    265.19971875,
-                    265.62159375
-                ],
-                [
-                    265.77346875,
-                    268.96284375
-                ]
-            ],
-            "speech_duration": 3.63
-        },
-        {
-            "chunk_start_time": 275.0,
-            "processing_time": 0.08,
-            "detected_speech_segments": [
-                [
-                    270.03096875,
-                    270.84096875
-                ],
-                [
-                    271.29659375,
-                    273.67596875
-                ]
-            ],
-            "speech_duration": 3.19
-        },
-        {
-            "chunk_start_time": 280.0,
-            "processing_time": 0.0815,
-            "detected_speech_segments": [
-                [
-                    275.03096875,
-                    275.72284375
-                ],
-                [
-                    276.78596875,
-                    278.97971875
-                ]
-            ],
-            "speech_duration": 2.89
-        },
-        {
-            "chunk_start_time": 285.0,
-            "processing_time": 0.079,
-            "detected_speech_segments": [
-                [
-                    280.03096875,
-                    281.00971875
-                ],
-                [
-                    281.48221875,
-                    283.01784375
-                ]
-            ],
-            "speech_duration": 2.51
-        },
-        {
-            "chunk_start_time": 290.0,
-            "processing_time": 0.08,
-            "detected_speech_segments": [
-                [
-                    286.34721875,
-                    289.09784375
-                ]
-            ],
-            "speech_duration": 2.75
-        },
-        {
-            "chunk_start_time": 295.0,
-            "processing_time": 0.08,
-            "detected_speech_segments": [
-                [
-                    290.52034375,
-                    294.04721875
-                ]
-            ],
-            "speech_duration": 3.53
-        },
-        {
-            "chunk_start_time": 300.0,
-            "processing_time": 0.079,
-            "detected_speech_segments": [
-                [
-                    295.03096875,
-                    298.30471875
-                ]
-            ],
-            "speech_duration": 3.27
-        },
-        {
-            "chunk_start_time": 305.0,
-            "processing_time": 0.083,
-            "detected_speech_segments": [
-                [
-                    300.03096875,
-                    300.33471875
-                ],
-                [
-                    300.94221875,
-                    304.06409375
-                ]
-            ],
-            "speech_duration": 3.43
-        },
-        {
-            "chunk_start_time": 310.0,
-            "processing_time": 0.081,
-            "detected_speech_segments": [
-                [
-                    305.03096875,
-                    308.72659375
-                ]
-            ],
-            "speech_duration": 3.7
-        },
-        {
-            "chunk_start_time": 315.0,
-            "processing_time": 0.08,
-            "detected_speech_segments": [
-                [
-                    310.03096875,
-                    310.70596875
-                ],
-                [
-                    311.34721875,
-                    314.06409375
-                ]
-            ],
-            "speech_duration": 3.39
-        },
-        {
-            "chunk_start_time": 320.0,
-            "processing_time": 0.08,
-            "detected_speech_segments": [
-                [
-                    315.03096875,
-                    316.93784375
-                ],
-                [
-                    317.39346875,
-                    319.06409375
-                ]
-            ],
-            "speech_duration": 3.58
-        },
-        {
-            "chunk_start_time": 325.0,
-            "processing_time": 0.08,
-            "detected_speech_segments": [
-                [
-                    320.03096875,
-                    321.93784375
-                ],
-                [
-                    322.59596875,
-                    324.08096875
-                ]
-            ],
-            "speech_duration": 3.39
-        },
-        {
-            "chunk_start_time": 330.0,
-            "processing_time": 0.079,
-            "detected_speech_segments": [
-                [
-                    325.03096875,
-                    327.86596875
-                ],
-                [
-                    328.32159375,
-                    329.06409375
-                ]
-            ],
-            "speech_duration": 3.58
-        },
-        {
-            "chunk_start_time": 335.0,
-            "processing_time": 0.08,
-            "detected_speech_segments": [
-                [
-                    330.31784375,
-                    332.02221875
-                ],
-                [
-                    332.32596875,
-                    334.06409375
-                ]
-            ],
-            "speech_duration": 3.44
-        },
-        {
-            "chunk_start_time": 340.0,
-            "processing_time": 0.08,
-            "detected_speech_segments": [
-                [
-                    335.03096875,
-                    339.09784375
-                ]
-            ],
-            "speech_duration": 4.07
-        },
-        {
-            "chunk_start_time": 345.0,
-            "processing_time": 0.08,
-            "detected_speech_segments": [
-                [
-                    340.03096875,
-                    341.60034375
-                ],
-                [
-                    341.92096875,
-                    344.08096875
-                ]
-            ],
-            "speech_duration": 3.73
-        },
-        {
-            "chunk_start_time": 350.0,
-            "processing_time": 0.079,
-            "detected_speech_segments": [
-                [
-                    345.03096875,
-                    349.03034375
-                ]
-            ],
-            "speech_duration": 4.0
-        },
-        {
-            "chunk_start_time": 355.0,
-            "processing_time": 0.0805,
-            "detected_speech_segments": [
-                [
-                    350.03096875,
-                    352.86596875
-                ],
-                [
-                    353.22034375,
-                    354.08096875
-                ]
-            ],
-            "speech_duration": 3.7
-        },
-        {
-            "chunk_start_time": 360.0,
-            "processing_time": 0.082,
-            "detected_speech_segments": [
-                [
-                    355.45284375,
-                    357.88284375
-                ],
-                [
-                    358.84471875,
-                    359.08096875
-                ]
-            ],
-            "speech_duration": 2.67
-        },
-        {
-            "chunk_start_time": 365.0,
+            "chunk_start_time": 16.0,
             "processing_time": 0.087,
             "detected_speech_segments": [
                 [
-                    360.84096875,
-                    363.67596875
-                ]
-            ],
-            "speech_duration": 2.83
-        },
-        {
-            "chunk_start_time": 370.0,
-            "processing_time": 0.079,
-            "detected_speech_segments": [
-                [
-                    365.03096875,
-                    368.30471875
-                ]
-            ],
-            "speech_duration": 3.27
-        },
-        {
-            "chunk_start_time": 375.0,
-            "processing_time": 0.0809,
-            "detected_speech_segments": [
-                [
-                    370.03096875,
-                    370.33471875
-                ],
-                [
-                    371.19534375,
-                    374.04721875
-                ]
-            ],
-            "speech_duration": 3.16
-        },
-        {
-            "chunk_start_time": 380.0,
-            "processing_time": 0.0824,
-            "detected_speech_segments": [
-                [
-                    375.03096875,
-                    376.58346875
-                ],
-                [
-                    377.39346875,
-                    379.06409375
-                ]
-            ],
-            "speech_duration": 3.22
-        },
-        {
-            "chunk_start_time": 385.0,
-            "processing_time": 0.083,
-            "detected_speech_segments": [
-                [
-                    380.03096875,
-                    381.71846875
-                ],
-                [
-                    382.12346875,
-                    383.72659375
-                ]
-            ],
-            "speech_duration": 3.29
-        },
-        {
-            "chunk_start_time": 390.0,
-            "processing_time": 0.08,
-            "detected_speech_segments": [
-                [
-                    385.03096875,
-                    389.08096875
-                ]
-            ],
-            "speech_duration": 4.05
-        },
-        {
-            "chunk_start_time": 395.0,
-            "processing_time": 0.081,
-            "detected_speech_segments": [
-                [
-                    390.03096875,
-                    394.03034375
-                ]
-            ],
-            "speech_duration": 4.0
-        },
-        {
-            "chunk_start_time": 400.0,
-            "processing_time": 0.084,
-            "detected_speech_segments": [
-                [
-                    395.03096875,
-                    399.08096875
-                ]
-            ],
-            "speech_duration": 4.05
-        },
-        {
-            "chunk_start_time": 405.0,
-            "processing_time": 0.081,
-            "detected_speech_segments": [
-                [
-                    400.03096875,
-                    404.03034375
-                ]
-            ],
-            "speech_duration": 4.0
-        },
-        {
-            "chunk_start_time": 410.0,
-            "processing_time": 0.081,
-            "detected_speech_segments": [
-                [
-                    405.03096875,
-                    407.37659375
-                ],
-                [
-                    407.71409375,
-                    409.04721875
-                ]
-            ],
-            "speech_duration": 3.68
-        },
-        {
-            "chunk_start_time": 415.0,
-            "processing_time": 0.08,
-            "detected_speech_segments": [
-                [
-                    410.03096875,
-                    413.69284375
-                ]
-            ],
-            "speech_duration": 3.66
-        },
-        {
-            "chunk_start_time": 420.0,
-            "processing_time": 0.082,
-            "detected_speech_segments": [
-                [
-                    415.03096875,
-                    419.08096875
-                ]
-            ],
-            "speech_duration": 4.05
-        },
-        {
-            "chunk_start_time": 425.0,
-            "processing_time": 0.082,
-            "detected_speech_segments": [
-                [
-                    420.03096875,
-                    422.73096875
-                ],
-                [
-                    423.27096875,
-                    424.09784375
-                ]
-            ],
-            "speech_duration": 3.53
-        },
-        {
-            "chunk_start_time": 430.0,
-            "processing_time": 0.081,
-            "detected_speech_segments": [
-                [
-                    425.28409375,
-                    428.67596875
-                ]
-            ],
-            "speech_duration": 3.39
-        },
-        {
-            "chunk_start_time": 435.0,
-            "processing_time": 0.08,
-            "detected_speech_segments": [
-                [
-                    430.03096875,
-                    434.06409375
-                ]
-            ],
-            "speech_duration": 4.03
-        },
-        {
-            "chunk_start_time": 440.0,
-            "processing_time": 0.079,
-            "detected_speech_segments": [
-                [
-                    435.03096875,
-                    436.70159375
-                ],
-                [
-                    436.83659375,
-                    439.08096875
-                ]
-            ],
-            "speech_duration": 3.91
-        },
-        {
-            "chunk_start_time": 445.0,
-            "processing_time": 0.0795,
-            "detected_speech_segments": [
-                [
-                    440.03096875,
-                    444.09784375
-                ]
-            ],
-            "speech_duration": 4.07
-        },
-        {
-            "chunk_start_time": 450.0,
-            "processing_time": 0.0793,
-            "detected_speech_segments": [
-                [
-                    445.79034375,
-                    447.59596875
-                ],
-                [
-                    448.08534375,
-                    449.06409375
-                ]
-            ],
-            "speech_duration": 2.78
-        },
-        {
-            "chunk_start_time": 455.0,
-            "processing_time": 0.08,
-            "detected_speech_segments": [
-                [
-                    450.03096875,
-                    454.06409375
-                ]
-            ],
-            "speech_duration": 4.03
-        },
-        {
-            "chunk_start_time": 460.0,
-            "processing_time": 0.079,
-            "detected_speech_segments": [
-                [
-                    455.16596875,
-                    455.68909375
-                ],
-                [
-                    455.77346875,
-                    459.08096875
-                ]
-            ],
-            "speech_duration": 3.83
-        },
-        {
-            "chunk_start_time": 465.0,
-            "processing_time": 0.08,
-            "detected_speech_segments": [
-                [
-                    460.03096875,
-                    463.11909375
-                ],
-                [
-                    463.27096875,
-                    464.06409375
-                ]
-            ],
-            "speech_duration": 3.88
-        },
-        {
-            "chunk_start_time": 470.0,
-            "processing_time": 0.08,
-            "detected_speech_segments": [
-                [
-                    465.31784375,
-                    465.58784375
-                ],
-                [
-                    465.60471875,
-                    469.08096875
-                ]
-            ],
-            "speech_duration": 3.75
-        },
-        {
-            "chunk_start_time": 475.0,
-            "processing_time": 0.082,
-            "detected_speech_segments": [
-                [
-                    470.03096875,
-                    472.30909375
-                ],
-                [
-                    472.96721875,
-                    474.01346875
-                ]
-            ],
-            "speech_duration": 3.32
-        },
-        {
-            "chunk_start_time": 480.0,
-            "processing_time": 0.082,
-            "detected_speech_segments": [
-                [
-                    475.03096875,
-                    477.14034375
-                ],
-                [
-                    477.95034375,
-                    478.99659375
-                ]
-            ],
-            "speech_duration": 3.16
-        },
-        {
-            "chunk_start_time": 485.0,
-            "processing_time": 0.082,
-            "detected_speech_segments": [
-                [
-                    480.03096875,
-                    483.99659375
-                ]
-            ],
-            "speech_duration": 3.97
-        },
-        {
-            "chunk_start_time": 490.0,
-            "processing_time": 0.081,
-            "detected_speech_segments": [
-                [
-                    485.03096875,
-                    488.67596875
-                ]
-            ],
-            "speech_duration": 3.64
-        },
-        {
-            "chunk_start_time": 495.0,
-            "processing_time": 0.082,
-            "detected_speech_segments": [
-                [
-                    490.03096875,
-                    492.74784375
-                ],
-                [
-                    493.45659375,
-                    494.08096875
-                ]
-            ],
-            "speech_duration": 3.34
-        },
-        {
-            "chunk_start_time": 500.0,
-            "processing_time": 0.081,
-            "detected_speech_segments": [
-                [
-                    495.48659375,
-                    499.09784375
-                ]
-            ],
-            "speech_duration": 3.61
-        },
-        {
-            "chunk_start_time": 505.0,
-            "processing_time": 0.08,
-            "detected_speech_segments": [
-                [
-                    500.03096875,
-                    504.06409375
-                ]
-            ],
-            "speech_duration": 4.03
-        },
-        {
-            "chunk_start_time": 510.0,
-            "processing_time": 0.0853,
-            "detected_speech_segments": [
-                [
-                    505.03096875,
-                    509.06409375
-                ]
-            ],
-            "speech_duration": 4.03
-        },
-        {
-            "chunk_start_time": 515.0,
-            "processing_time": 0.0809,
-            "detected_speech_segments": [
-                [
-                    510.03096875,
-                    512.81534375
-                ],
-                [
-                    513.13596875,
-                    514.06409375
-                ]
-            ],
-            "speech_duration": 3.71
-        },
-        {
-            "chunk_start_time": 520.0,
-            "processing_time": 0.0802,
-            "detected_speech_segments": [
-                [
-                    515.18284375,
-                    516.48221875
-                ],
-                [
-                    517.30909375,
-                    519.08096875
-                ]
-            ],
-            "speech_duration": 3.07
-        },
-        {
-            "chunk_start_time": 525.0,
-            "processing_time": 0.082,
-            "detected_speech_segments": [
-                [
-                    520.58784375,
-                    524.08096875
-                ]
-            ],
-            "speech_duration": 3.49
-        },
-        {
-            "chunk_start_time": 530.0,
-            "processing_time": 0.081,
-            "detected_speech_segments": [
-                [
-                    525.03096875,
-                    526.81971875
-                ],
-                [
-                    527.27534375,
-                    529.04721875
-                ]
-            ],
-            "speech_duration": 3.56
-        },
-        {
-            "chunk_start_time": 535.0,
-            "processing_time": 0.079,
-            "detected_speech_segments": [
-                [
-                    530.03096875,
-                    534.06409375
-                ]
-            ],
-            "speech_duration": 4.03
-        },
-        {
-            "chunk_start_time": 540.0,
-            "processing_time": 0.081,
-            "detected_speech_segments": [
-                [
-                    535.03096875,
-                    535.53721875
-                ],
-                [
-                    535.62159375,
-                    538.30471875
-                ]
-            ],
-            "speech_duration": 3.19
-        },
-        {
-            "chunk_start_time": 545.0,
-            "processing_time": 0.083,
-            "detected_speech_segments": [
-                [
-                    540.03096875,
-                    540.46971875
-                ],
-                [
-                    540.99284375,
-                    544.06409375
-                ]
-            ],
-            "speech_duration": 3.51
-        },
-        {
-            "chunk_start_time": 550.0,
-            "processing_time": 0.083,
-            "detected_speech_segments": [
-                [
-                    545.03096875,
-                    547.69721875
-                ]
-            ],
-            "speech_duration": 2.67
-        },
-        {
-            "chunk_start_time": 555.0,
-            "processing_time": 0.079,
-            "detected_speech_segments": [
-                [
-                    551.22909375,
-                    552.52846875
-                ]
-            ],
-            "speech_duration": 1.3
-        },
-        {
-            "chunk_start_time": 560.0,
-            "processing_time": 0.08,
-            "detected_speech_segments": [
-                [
-                    555.97596875,
-                    559.06409375
-                ]
-            ],
-            "speech_duration": 3.09
-        },
-        {
-            "chunk_start_time": 565.0,
-            "processing_time": 0.079,
-            "detected_speech_segments": [
-                [
-                    560.03096875,
-                    561.33034375
-                ],
-                [
-                    562.07284375,
-                    564.04721875
-                ]
-            ],
-            "speech_duration": 3.27
-        },
-        {
-            "chunk_start_time": 570.0,
-            "processing_time": 0.079,
-            "detected_speech_segments": [
-                [
-                    565.03096875,
-                    568.57471875
-                ]
-            ],
-            "speech_duration": 3.54
-        },
-        {
-            "chunk_start_time": 575.0,
-            "processing_time": 0.08,
-            "detected_speech_segments": [
-                [
-                    570.03096875,
-                    570.58784375
-                ],
-                [
-                    571.43159375,
-                    574.06409375
-                ]
-            ],
-            "speech_duration": 3.19
-        },
-        {
-            "chunk_start_time": 580.0,
-            "processing_time": 0.081,
-            "detected_speech_segments": [
-                [
-                    575.03096875,
-                    577.05596875
-                ],
-                [
-                    577.47784375,
-                    578.92909375
-                ]
-            ],
-            "speech_duration": 3.48
-        },
-        {
-            "chunk_start_time": 585.0,
-            "processing_time": 0.082,
-            "detected_speech_segments": [
-                [
-                    580.03096875,
-                    580.95909375
-                ],
-                [
-                    582.62971875,
-                    584.09784375
-                ]
-            ],
-            "speech_duration": 2.4
-        },
-        {
-            "chunk_start_time": 590.0,
-            "processing_time": 0.081,
-            "detected_speech_segments": [
-                [
-                    585.03096875,
-                    589.08096875
-                ]
-            ],
-            "speech_duration": 4.05
-        },
-        {
-            "chunk_start_time": 595.0,
-            "processing_time": 0.08,
-            "detected_speech_segments": [
-                [
-                    590.03096875,
-                    591.26284375
-                ],
-                [
-                    591.56659375,
-                    593.99659375
-                ]
-            ],
-            "speech_duration": 3.66
-        },
-        {
-            "chunk_start_time": 600.0,
-            "processing_time": 0.079,
-            "detected_speech_segments": [
-                [
-                    595.03096875,
-                    595.92534375
-                ],
-                [
-                    596.21221875,
-                    597.62971875
-                ],
-                [
-                    598.05159375,
-                    599.04721875
-                ]
-            ],
-            "speech_duration": 3.31
-        },
-        {
-            "chunk_start_time": 605.0,
-            "processing_time": 0.081,
-            "detected_speech_segments": [
-                [
-                    600.03096875,
-                    604.03034375
-                ]
-            ],
-            "speech_duration": 4.0
-        },
-        {
-            "chunk_start_time": 610.0,
-            "processing_time": 0.082,
-            "detected_speech_segments": [
-                [
-                    605.03096875,
-                    607.78159375
-                ],
-                [
-                    608.15284375,
-                    609.03034375
-                ]
-            ],
-            "speech_duration": 3.63
-        },
-        {
-            "chunk_start_time": 615.0,
-            "processing_time": 0.08,
-            "detected_speech_segments": [
-                [
-                    610.03096875,
-                    610.04784375
-                ],
-                [
-                    610.08159375,
-                    614.08096875
-                ]
-            ],
-            "speech_duration": 4.02
-        },
-        {
-            "chunk_start_time": 620.0,
-            "processing_time": 0.081,
-            "detected_speech_segments": [
-                [
-                    615.03096875,
-                    617.19096875
-                ],
-                [
-                    617.52846875,
-                    619.04721875
-                ]
-            ],
-            "speech_duration": 3.68
-        },
-        {
-            "chunk_start_time": 625.0,
-            "processing_time": 0.081,
-            "detected_speech_segments": [
-                [
-                    620.03096875,
-                    624.04721875
-                ]
-            ],
-            "speech_duration": 4.02
-        },
-        {
-            "chunk_start_time": 630.0,
-            "processing_time": 0.0831,
-            "detected_speech_segments": [
-                [
-                    625.03096875,
-                    629.06409375
-                ]
-            ],
-            "speech_duration": 4.03
-        },
-        {
-            "chunk_start_time": 635.0,
-            "processing_time": 0.081,
-            "detected_speech_segments": [
-                [
-                    630.03096875,
-                    634.04721875
-                ]
-            ],
-            "speech_duration": 4.02
-        },
-        {
-            "chunk_start_time": 640.0,
-            "processing_time": 0.08,
-            "detected_speech_segments": [
-                [
-                    635.03096875,
-                    636.66784375
-                ],
-                [
-                    637.00534375,
-                    639.03034375
-                ]
-            ],
-            "speech_duration": 3.66
-        },
-        {
-            "chunk_start_time": 645.0,
-            "processing_time": 0.0805,
-            "detected_speech_segments": [
-                [
-                    640.03096875,
-                    643.01784375
-                ],
-                [
-                    643.23721875,
-                    644.08096875
-                ]
-            ],
-            "speech_duration": 3.83
-        },
-        {
-            "chunk_start_time": 650.0,
-            "processing_time": 0.0805,
-            "detected_speech_segments": [
-                [
-                    645.25034375,
-                    649.03034375
-                ]
-            ],
-            "speech_duration": 3.78
-        },
-        {
-            "chunk_start_time": 655.0,
-            "processing_time": 0.0792,
-            "detected_speech_segments": [
-                [
-                    650.03096875,
-                    651.41471875
-                ],
-                [
-                    651.73534375,
-                    654.04721875
-                ]
-            ],
-            "speech_duration": 3.7
-        },
-        {
-            "chunk_start_time": 660.0,
-            "processing_time": 0.079,
-            "detected_speech_segments": [
-                [
-                    655.03096875,
-                    658.23721875
-                ],
-                [
-                    658.64221875,
-                    659.08096875
-                ]
-            ],
-            "speech_duration": 3.64
-        },
-        {
-            "chunk_start_time": 665.0,
-            "processing_time": 0.0806,
-            "detected_speech_segments": [
-                [
-                    660.03096875,
-                    660.18284375
-                ],
-                [
-                    660.67221875,
-                    663.20346875
-                ],
-                [
-                    663.76034375,
-                    664.08096875
-                ]
-            ],
-            "speech_duration": 3.0
-        },
-        {
-            "chunk_start_time": 670.0,
-            "processing_time": 0.083,
-            "detected_speech_segments": [
-                [
-                    665.80721875,
-                    668.35534375
-                ]
-            ],
-            "speech_duration": 2.55
-        },
-        {
-            "chunk_start_time": 675.0,
-            "processing_time": 0.082,
-            "detected_speech_segments": [
-                [
-                    670.03096875,
-                    670.33471875
-                ],
-                [
-                    670.95909375,
-                    674.04721875
-                ]
-            ],
-            "speech_duration": 3.39
-        },
-        {
-            "chunk_start_time": 680.0,
-            "processing_time": 0.08,
-            "detected_speech_segments": [
-                [
-                    675.03096875,
-                    676.26284375
-                ],
-                [
-                    676.53284375,
-                    679.06409375
-                ]
-            ],
-            "speech_duration": 3.76
-        },
-        {
-            "chunk_start_time": 685.0,
-            "processing_time": 0.08,
-            "detected_speech_segments": [
-                [
-                    680.03096875,
-                    682.73096875
-                ],
-                [
-                    683.00096875,
-                    684.04721875
-                ]
-            ],
-            "speech_duration": 3.75
-        },
-        {
-            "chunk_start_time": 690.0,
-            "processing_time": 0.079,
-            "detected_speech_segments": [
-                [
-                    685.03096875,
-                    687.93346875
-                ]
-            ],
-            "speech_duration": 2.9
-        },
-        {
-            "chunk_start_time": 695.0,
-            "processing_time": 0.0787,
-            "detected_speech_segments": [
-                [
-                    691.58346875,
-                    693.72659375
-                ]
-            ],
-            "speech_duration": 2.14
-        },
-        {
-            "chunk_start_time": 700.0,
-            "processing_time": 0.081,
-            "detected_speech_segments": [
-                [
-                    695.03096875,
-                    695.77346875
-                ],
-                [
-                    696.19534375,
-                    698.37221875
-                ],
-                [
-                    698.86159375,
-                    699.03034375
-                ]
-            ],
-            "speech_duration": 3.09
-        },
-        {
-            "chunk_start_time": 705.0,
-            "processing_time": 0.078,
-            "detected_speech_segments": [
-                [
-                    700.03096875,
-                    700.41909375
-                ],
-                [
-                    700.77346875,
-                    704.03034375
-                ]
-            ],
-            "speech_duration": 3.64
-        },
-        {
-            "chunk_start_time": 710.0,
-            "processing_time": 0.079,
-            "detected_speech_segments": [
-                [
-                    705.03096875,
-                    707.47784375
-                ],
-                [
-                    707.83221875,
-                    709.06409375
-                ]
-            ],
-            "speech_duration": 3.68
-        },
-        {
-            "chunk_start_time": 715.0,
-            "processing_time": 0.08,
-            "detected_speech_segments": [
-                [
-                    710.03096875,
-                    713.33846875
-                ]
-            ],
-            "speech_duration": 3.31
-        },
-        {
-            "chunk_start_time": 720.0,
-            "processing_time": 0.079,
-            "detected_speech_segments": [
-                [
-                    715.03096875,
-                    715.36846875
-                ],
-                [
-                    716.12784375,
-                    718.52409375
-                ]
-            ],
-            "speech_duration": 2.73
-        },
-        {
-            "chunk_start_time": 725.0,
-            "processing_time": 0.079,
-            "detected_speech_segments": [
-                [
-                    720.03096875,
-                    720.65534375
-                ],
-                [
-                    720.79034375,
-                    724.04721875
-                ]
-            ],
-            "speech_duration": 3.88
-        },
-        {
-            "chunk_start_time": 730.0,
-            "processing_time": 0.079,
-            "detected_speech_segments": [
-                [
-                    725.31784375,
-                    728.82784375
-                ]
-            ],
-            "speech_duration": 3.51
-        },
-        {
-            "chunk_start_time": 735.0,
-            "processing_time": 0.081,
-            "detected_speech_segments": [
-                [
-                    730.03096875,
-                    730.58784375
-                ],
-                [
-                    731.24596875,
-                    732.93346875
-                ],
-                [
-                    733.40596875,
-                    734.06409375
-                ]
-            ],
-            "speech_duration": 2.9
-        },
-        {
-            "chunk_start_time": 740.0,
-            "processing_time": 0.079,
-            "detected_speech_segments": [
-                [
-                    735.38534375,
-                    736.33034375
-                ],
-                [
-                    736.95471875,
-                    738.65909375
-                ]
-            ],
-            "speech_duration": 2.65
-        },
-        {
-            "chunk_start_time": 745.0,
-            "processing_time": 0.079,
-            "detected_speech_segments": [
-                [
-                    740.03096875,
-                    740.90846875
-                ],
-                [
-                    741.27971875,
-                    743.81096875
-                ]
-            ],
-            "speech_duration": 3.41
-        },
-        {
-            "chunk_start_time": 750.0,
-            "processing_time": 0.079,
-            "detected_speech_segments": [
-                [
-                    745.03096875,
-                    749.06409375
-                ]
-            ],
-            "speech_duration": 4.03
-        },
-        {
-            "chunk_start_time": 755.0,
-            "processing_time": 0.079,
-            "detected_speech_segments": [
-                [
-                    750.40221875,
-                    754.09784375
-                ]
-            ],
-            "speech_duration": 3.7
-        },
-        {
-            "chunk_start_time": 760.0,
-            "processing_time": 0.079,
-            "detected_speech_segments": [
-                [
-                    755.03096875,
-                    759.06409375
-                ]
-            ],
-            "speech_duration": 4.03
-        },
-        {
-            "chunk_start_time": 765.0,
-            "processing_time": 0.08,
-            "detected_speech_segments": [
-                [
-                    760.03096875,
-                    761.78596875
-                ],
-                [
-                    762.02221875,
-                    764.03034375
-                ]
-            ],
-            "speech_duration": 3.76
-        },
-        {
-            "chunk_start_time": 770.0,
-            "processing_time": 0.081,
-            "detected_speech_segments": [
-                [
-                    765.03096875,
-                    768.52409375
-                ]
-            ],
-            "speech_duration": 3.49
-        },
-        {
-            "chunk_start_time": 775.0,
-            "processing_time": 0.081,
-            "detected_speech_segments": [
-                [
-                    770.03096875,
-                    770.28409375
-                ],
-                [
-                    770.94221875,
-                    774.06409375
-                ]
-            ],
-            "speech_duration": 3.37
-        },
-        {
-            "chunk_start_time": 780.0,
-            "processing_time": 0.082,
-            "detected_speech_segments": [
-                [
-                    775.03096875,
-                    776.66784375
-                ],
-                [
-                    776.97159375,
-                    779.04721875
-                ]
-            ],
-            "speech_duration": 3.71
-        },
-        {
-            "chunk_start_time": 785.0,
-            "processing_time": 0.081,
-            "detected_speech_segments": [
-                [
-                    780.19971875,
-                    783.49034375
-                ]
-            ],
-            "speech_duration": 3.29
-        },
-        {
-            "chunk_start_time": 790.0,
-            "processing_time": 0.0828,
-            "detected_speech_segments": [
-                [
-                    785.03096875,
-                    785.46971875
-                ],
-                [
-                    786.38096875,
-                    788.76034375
-                ]
-            ],
-            "speech_duration": 2.82
-        },
-        {
-            "chunk_start_time": 795.0,
-            "processing_time": 0.081,
-            "detected_speech_segments": [
-                [
-                    790.03096875,
-                    790.80721875
-                ],
-                [
-                    790.94221875,
-                    793.32159375
-                ]
-            ],
-            "speech_duration": 3.16
-        },
-        {
-            "chunk_start_time": 800.0,
-            "processing_time": 0.079,
-            "detected_speech_segments": [
-                [
-                    795.03096875,
-                    799.08096875
-                ]
-            ],
-            "speech_duration": 4.05
-        },
-        {
-            "chunk_start_time": 805.0,
-            "processing_time": 0.081,
-            "detected_speech_segments": [
-                [
-                    800.03096875,
-                    801.39784375
-                ],
-                [
-                    801.83659375,
-                    804.03034375
-                ]
-            ],
-            "speech_duration": 3.56
-        },
-        {
-            "chunk_start_time": 810.0,
-            "processing_time": 0.082,
-            "detected_speech_segments": [
-                [
-                    805.03096875,
-                    807.02221875
-                ],
-                [
-                    807.39346875,
-                    809.06409375
-                ]
-            ],
-            "speech_duration": 3.66
-        },
-        {
-            "chunk_start_time": 815.0,
-            "processing_time": 0.0803,
-            "detected_speech_segments": [
-                [
-                    810.03096875,
-                    814.03034375
-                ]
-            ],
-            "speech_duration": 4.0
-        },
-        {
-            "chunk_start_time": 820.0,
-            "processing_time": 0.079,
-            "detected_speech_segments": [
-                [
-                    815.03096875,
-                    819.01346875
-                ]
-            ],
-            "speech_duration": 3.98
-        },
-        {
-            "chunk_start_time": 825.0,
-            "processing_time": 0.08,
-            "detected_speech_segments": [
-                [
-                    820.03096875,
-                    823.08534375
-                ]
-            ],
-            "speech_duration": 3.05
-        },
-        {
-            "chunk_start_time": 830.0,
-            "processing_time": 0.082,
-            "detected_speech_segments": [
-                [
-                    826.88721875,
-                    828.03471875
-                ]
-            ],
-            "speech_duration": 1.15
-        },
-        {
-            "chunk_start_time": 835.0,
-            "processing_time": 0.079,
-            "detected_speech_segments": [
-                [
-                    831.85346875,
-                    834.06409375
-                ]
-            ],
-            "speech_duration": 2.21
-        },
-        {
-            "chunk_start_time": 840.0,
-            "processing_time": 0.079,
-            "detected_speech_segments": [
-                [
-                    835.03096875,
-                    836.80284375
-                ],
-                [
-                    837.22471875,
-                    838.22034375
-                ],
-                [
-                    838.74346875,
-                    839.06409375
-                ]
-            ],
-            "speech_duration": 3.09
-        },
-        {
-            "chunk_start_time": 845.0,
-            "processing_time": 0.081,
-            "detected_speech_segments": [
-                [
-                    840.03096875,
-                    840.23346875
+                    12.03096875,
+                    14.37659375
                 ],
-                [
-                    840.79034375,
-                    844.09784375
-                ]
-            ],
-            "speech_duration": 3.51
-        },
-        {
-            "chunk_start_time": 850.0,
-            "processing_time": 0.081,
-            "detected_speech_segments": [
-                [
-                    845.28409375,
-                    849.04721875
-                ]
-            ],
-            "speech_duration": 3.76
-        },
-        {
-            "chunk_start_time": 855.0,
-            "processing_time": 0.08,
-            "detected_speech_segments": [
-                [
-                    850.03096875,
-                    851.12784375
-                ],
-                [
-                    851.93784375,
-                    854.06409375
-                ]
-            ],
-            "speech_duration": 3.22
-        },
-        {
-            "chunk_start_time": 860.0,
-            "processing_time": 0.082,
-            "detected_speech_segments": [
-                [
-                    855.03096875,
-                    858.40596875
-                ]
-            ],
-            "speech_duration": 3.38
-        },
-        {
-            "chunk_start_time": 865.0,
-            "processing_time": 0.08,
-            "detected_speech_segments": [
-                [
-                    860.03096875,
-                    860.41909375
-                ],
-                [
-                    860.90846875,
-                    863.38909375
-                ]
-            ],
-            "speech_duration": 2.87
-        },
-        {
-            "chunk_start_time": 870.0,
-            "processing_time": 0.08,
-            "detected_speech_segments": [
-                [
-                    865.03096875,
-                    865.45284375
-                ],
-                [
-                    866.36409375,
-                    869.08096875
-                ]
-            ],
-            "speech_duration": 3.14
-        },
-        {
-            "chunk_start_time": 875.0,
-            "processing_time": 0.079,
-            "detected_speech_segments": [
-                [
-                    870.03096875,
-                    872.19096875
-                ],
-                [
-                    873.52409375,
-                    873.84471875
-                ]
-            ],
-            "speech_duration": 2.48
-        },
-        {
-            "chunk_start_time": 880.0,
-            "processing_time": 0.079,
-            "detected_speech_segments": [
-                [
-                    875.03096875,
-                    879.09784375
-                ]
-            ],
-            "speech_duration": 4.07
-        },
-        {
-            "chunk_start_time": 885.0,
-            "processing_time": 0.079,
-            "detected_speech_segments": [
-                [
-                    880.03096875,
-                    881.92096875
-                ],
-                [
-                    883.05159375,
-                    884.08096875
-                ]
-            ],
-            "speech_duration": 2.92
-        },
-        {
-            "chunk_start_time": 890.0,
-            "processing_time": 0.0797,
-            "detected_speech_segments": [
-                [
-                    885.03096875,
-                    889.06409375
-                ]
-            ],
-            "speech_duration": 4.03
-        },
-        {
-            "chunk_start_time": 895.0,
-            "processing_time": 0.079,
-            "detected_speech_segments": [
-                [
-                    890.03096875,
-                    891.29659375
-                ],
-                [
-                    892.37659375,
-                    894.08096875
-                ]
-            ],
-            "speech_duration": 2.97
-        },
-        {
-            "chunk_start_time": 900.0,
-            "processing_time": 0.08,
-            "detected_speech_segments": [
-                [
-                    895.03096875,
-                    896.17846875
-                ],
-                [
-                    897.98409375,
-                    899.06409375
-                ]
-            ],
-            "speech_duration": 2.23
-        },
-        {
-            "chunk_start_time": 905.0,
-            "processing_time": 0.082,
-            "detected_speech_segments": [
-                [
-                    900.03096875,
-                    901.93784375
-                ],
-                [
-                    902.24159375,
-                    903.89534375
-                ]
-            ],
-            "speech_duration": 3.56
-        },
-        {
-            "chunk_start_time": 910.0,
-            "processing_time": 0.081,
-            "detected_speech_segments": [
-                [
-                    905.03096875,
-                    905.87471875
-                ],
-                [
-                    906.61721875,
-                    908.69284375
-                ]
-            ],
-            "speech_duration": 2.92
-        },
-        {
-            "chunk_start_time": 915.0,
-            "processing_time": 0.081,
-            "detected_speech_segments": [
-                [
-                    910.03096875,
-                    910.70596875
-                ],
-                [
-                    910.89159375,
-                    912.44409375
-                ],
-                [
-                    913.01784375,
-                    914.03034375
-                ]
-            ],
-            "speech_duration": 3.24
-        },
-        {
-            "chunk_start_time": 920.0,
-            "processing_time": 0.082,
-            "detected_speech_segments": [
-                [
-                    915.03096875,
-                    918.01784375
-                ],
-                [
-                    918.40596875,
-                    919.06409375
-                ]
-            ],
-            "speech_duration": 3.64
-        },
-        {
-            "chunk_start_time": 925.0,
-            "processing_time": 0.0837,
-            "detected_speech_segments": [
-                [
-                    920.43596875,
-                    923.13596875
-                ],
-                [
-                    923.59159375,
-                    924.04721875
-                ]
-            ],
-            "speech_duration": 3.16
-        },
-        {
-            "chunk_start_time": 930.0,
-            "processing_time": 0.0816,
-            "detected_speech_segments": [
-                [
-                    925.03096875,
-                    925.11534375
-                ],
-                [
-                    925.58784375,
-                    927.95034375
-                ],
-                [
-                    928.40596875,
-                    929.04721875
-                ]
-            ],
-            "speech_duration": 3.09
-        },
-        {
-            "chunk_start_time": 935.0,
-            "processing_time": 0.08,
-            "detected_speech_segments": [
-                [
-                    930.41909375,
-                    931.97159375
-                ],
-                [
-                    933.03471875,
-                    934.06409375
-                ]
-            ],
-            "speech_duration": 2.58
-        },
-        {
-            "chunk_start_time": 940.0,
-            "processing_time": 0.081,
-            "detected_speech_segments": [
-                [
-                    935.03096875,
-                    936.81971875
-                ],
-                [
-                    937.47784375,
-                    939.04721875
-                ]
-            ],
-            "speech_duration": 3.36
-        },
-        {
-            "chunk_start_time": 945.0,
-            "processing_time": 0.083,
-            "detected_speech_segments": [
-                [
-                    940.03096875,
-                    942.73096875
-                ],
-                [
-                    943.05159375,
-                    943.97971875
-                ]
-            ],
-            "speech_duration": 3.63
-        },
-        {
-            "chunk_start_time": 950.0,
-            "processing_time": 0.079,
-            "detected_speech_segments": [
-                [
-                    945.03096875,
-                    949.04721875
-                ]
-            ],
-            "speech_duration": 4.02
-        },
-        {
-            "chunk_start_time": 955.0,
-            "processing_time": 0.084,
-            "detected_speech_segments": [
-                [
-                    950.03096875,
-                    953.30471875
-                ],
-                [
-                    953.47346875,
-                    954.01346875
-                ]
-            ],
-            "speech_duration": 3.81
-        },
-        {
-            "chunk_start_time": 960.0,
-            "processing_time": 0.082,
-            "detected_speech_segments": [
-                [
-                    955.03096875,
-                    956.93784375
-                ],
-                [
-                    957.30909375,
-                    959.04721875
-                ]
-            ],
-            "speech_duration": 3.64
-        },
-        {
-            "chunk_start_time": 965.0,
-            "processing_time": 0.08,
-            "detected_speech_segments": [
-                [
-                    960.03096875,
-                    962.51159375
-                ],
-                [
-                    963.42284375,
-                    964.08096875
-                ]
-            ],
-            "speech_duration": 3.14
-        },
-        {
-            "chunk_start_time": 970.0,
-            "processing_time": 0.086,
-            "detected_speech_segments": [
-                [
-                    965.41909375,
-                    967.73096875
-                ],
-                [
-                    968.13596875,
-                    969.03034375
-                ]
-            ],
-            "speech_duration": 3.21
-        },
-        {
-            "chunk_start_time": 975.0,
-            "processing_time": 0.086,
-            "detected_speech_segments": [
                 [
-                    970.13221875,
-                    974.06409375
+                    15.22034375,
+                    16.80659375
                 ]
             ],
             "speech_duration": 3.93
         },
         {
-            "chunk_start_time": 980.0,
-            "processing_time": 0.079,
+            "chunk_start_time": 20.0,
+            "processing_time": 0.097,
             "detected_speech_segments": [
                 [
-                    975.03096875,
-                    979.08096875
+                    16.03096875,
+                    17.83659375
+                ],
+                [
+                    19.22034375,
+                    20.519718750000003
+                ]
+            ],
+            "speech_duration": 3.11
+        },
+        {
+            "chunk_start_time": 24.0,
+            "processing_time": 0.101,
+            "detected_speech_segments": [
+                [
+                    20.03096875,
+                    20.53721875
+                ],
+                [
+                    21.34721875,
+                    22.81534375
+                ],
+                [
+                    23.30471875,
+                    25.009093749999998
+                ]
+            ],
+            "speech_duration": 3.68
+        },
+        {
+            "chunk_start_time": 28.0,
+            "processing_time": 0.1,
+            "detected_speech_segments": [
+                [
+                    24.03096875,
+                    25.34721875
+                ],
+                [
+                    26.00534375,
+                    27.76034375
+                ],
+                [
+                    28.53659375,
+                    29.02596875
+                ]
+            ],
+            "speech_duration": 3.56
+        },
+        {
+            "chunk_start_time": 32.0,
+            "processing_time": 0.1,
+            "detected_speech_segments": [
+                [
+                    28.57096875,
+                    29.60034375
+                ],
+                [
+                    30.66346875,
+                    32.62096875
+                ]
+            ],
+            "speech_duration": 2.99
+        },
+        {
+            "chunk_start_time": 36.0,
+            "processing_time": 0.1,
+            "detected_speech_segments": [
+                [
+                    32.03096875,
+                    32.70596875
+                ],
+                [
+                    33.88721875,
+                    34.32596875
+                ],
+                [
+                    34.51159375,
+                    36.11471875
+                ],
+                [
+                    36.62096875,
+                    36.97534375
+                ]
+            ],
+            "speech_duration": 3.07
+        },
+        {
+            "chunk_start_time": 40.0,
+            "processing_time": 0.0941,
+            "detected_speech_segments": [
+                [
+                    36.03096875,
+                    36.09846875
+                ],
+                [
+                    36.65534375,
+                    40.01346875
+                ]
+            ],
+            "speech_duration": 3.43
+        },
+        {
+            "chunk_start_time": 44.0,
+            "processing_time": 0.085,
+            "detected_speech_segments": [
+                [
+                    41.29659375,
+                    41.68471875
+                ],
+                [
+                    41.97159375,
+                    45.025968750000004
+                ]
+            ],
+            "speech_duration": 3.44
+        },
+        {
+            "chunk_start_time": 48.0,
+            "processing_time": 0.085,
+            "detected_speech_segments": [
+                [
+                    44.03096875,
+                    47.40596875
+                ],
+                [
+                    47.99659375,
+                    48.99221875
+                ]
+            ],
+            "speech_duration": 4.37
+        },
+        {
+            "chunk_start_time": 52.0,
+            "processing_time": 0.0873,
+            "detected_speech_segments": [
+                [
+                    48.03096875,
+                    51.37221875
+                ],
+                [
+                    52.26659375,
+                    52.97534375
                 ]
             ],
             "speech_duration": 4.05
         },
         {
-            "chunk_start_time": 985.0,
-            "processing_time": 0.083,
+            "chunk_start_time": 56.0,
+            "processing_time": 0.0817,
             "detected_speech_segments": [
                 [
-                    980.03096875,
-                    981.87034375
+                    52.23346875,
+                    54.89971875
                 ],
                 [
-                    982.47784375,
-                    984.03034375
+                    55.38909375,
+                    56.94159375
                 ]
             ],
-            "speech_duration": 3.39
+            "speech_duration": 4.22
         },
         {
-            "chunk_start_time": 990.0,
-            "processing_time": 0.083,
+            "chunk_start_time": 60.0,
+            "processing_time": 0.084,
             "detected_speech_segments": [
                 [
-                    985.03096875,
-                    986.56659375
+                    56.03096875,
+                    57.39784375
                 ],
                 [
-                    986.90409375,
-                    989.08096875
-                ]
-            ],
-            "speech_duration": 3.71
-        },
-        {
-            "chunk_start_time": 995.0,
-            "processing_time": 0.0844,
-            "detected_speech_segments": [
-                [
-                    990.03096875,
-                    992.49471875
+                    57.97159375,
+                    59.91221875
                 ],
                 [
-                    993.79409375,
-                    994.06409375
+                    60.45221875,
+                    61.025968750000004
                 ]
             ],
-            "speech_duration": 2.73
+            "speech_duration": 3.88
         },
         {
-            "chunk_start_time": 1000.0,
-            "processing_time": 0.078,
+            "chunk_start_time": 64.0,
+            "processing_time": 0.089,
             "detected_speech_segments": [
                 [
-                    995.80721875,
-                    998.97971875
-                ]
-            ],
-            "speech_duration": 3.17
-        },
-        {
-            "chunk_start_time": 1005.0,
-            "processing_time": 0.08,
-            "detected_speech_segments": [
-                [
-                    1000.03096875,
-                    1002.10659375
+                    60.48659375,
+                    61.36409375
                 ],
                 [
-                    1002.93346875,
-                    1003.99659375
+                    62.20784375,
+                    65.02596875
                 ]
             ],
-            "speech_duration": 3.14
+            "speech_duration": 3.7
         },
         {
-            "chunk_start_time": 1010.0,
-            "processing_time": 0.0782,
+            "chunk_start_time": 68.0,
+            "processing_time": 0.088,
             "detected_speech_segments": [
                 [
-                    1005.03096875,
-                    1008.57471875
+                    64.03096875,
+                    66.00534375
+                ],
+                [
+                    66.41034375,
+                    68.70534375
                 ]
             ],
-            "speech_duration": 3.54
+            "speech_duration": 4.27
         },
         {
-            "chunk_start_time": 1015.0,
-            "processing_time": 0.079,
+            "chunk_start_time": 72.0,
+            "processing_time": 0.084,
             "detected_speech_segments": [
                 [
-                    1010.03096875,
-                    1014.08096875
+                    68.03096875,
+                    68.70596875
+                ],
+                [
+                    69.04346875,
+                    71.97971875
+                ],
+                [
+                    72.58721875,
+                    73.02596875
                 ]
             ],
             "speech_duration": 4.05
         },
         {
-            "chunk_start_time": 1020.0,
-            "processing_time": 0.083,
+            "chunk_start_time": 76.0,
+            "processing_time": 0.092,
             "detected_speech_segments": [
                 [
-                    1015.03096875,
-                    1019.09784375
+                    72.62159375,
+                    75.33846875
+                ],
+                [
+                    75.64221875,
+                    77.02596875
+                ]
+            ],
+            "speech_duration": 4.1
+        },
+        {
+            "chunk_start_time": 80.0,
+            "processing_time": 0.0887,
+            "detected_speech_segments": [
+                [
+                    76.03096875,
+                    77.88721875
+                ],
+                [
+                    78.10659375,
+                    78.73096875
+                ],
+                [
+                    78.78159375,
+                    81.00909375
+                ]
+            ],
+            "speech_duration": 4.71
+        },
+        {
+            "chunk_start_time": 84.0,
+            "processing_time": 0.0814,
+            "detected_speech_segments": [
+                [
+                    80.03096875,
+                    84.41846875
+                ]
+            ],
+            "speech_duration": 4.39
+        },
+        {
+            "chunk_start_time": 88.0,
+            "processing_time": 0.087,
+            "detected_speech_segments": [
+                [
+                    84.03096875,
+                    84.38534375
+                ],
+                [
+                    85.12784375,
+                    89.02596875
+                ]
+            ],
+            "speech_duration": 4.25
+        },
+        {
+            "chunk_start_time": 92.0,
+            "processing_time": 0.087,
+            "detected_speech_segments": [
+                [
+                    88.03096875,
+                    89.53284375
+                ],
+                [
+                    89.87034375,
+                    91.06846875
+                ],
+                [
+                    91.50721875,
+                    93.02596875
+                ]
+            ],
+            "speech_duration": 4.22
+        },
+        {
+            "chunk_start_time": 96.0,
+            "processing_time": 0.084,
+            "detected_speech_segments": [
+                [
+                    92.03096875,
+                    94.59596875
+                ],
+                [
+                    95.06846875,
+                    97.02596875
+                ]
+            ],
+            "speech_duration": 4.52
+        },
+        {
+            "chunk_start_time": 100.0,
+            "processing_time": 0.0881,
+            "detected_speech_segments": [
+                [
+                    96.03096875,
+                    98.54534375
+                ],
+                [
+                    99.20346875,
+                    101.00909375
+                ]
+            ],
+            "speech_duration": 4.32
+        },
+        {
+            "chunk_start_time": 104.0,
+            "processing_time": 0.087,
+            "detected_speech_segments": [
+                [
+                    100.03096875,
+                    100.26721875
+                ],
+                [
+                    100.48659375,
+                    101.83659375
+                ],
+                [
+                    102.02221875000001,
+                    105.02596875
+                ]
+            ],
+            "speech_duration": 4.59
+        },
+        {
+            "chunk_start_time": 108.0,
+            "processing_time": 0.086,
+            "detected_speech_segments": [
+                [
+                    104.03096875,
+                    107.35534375
+                ],
+                [
+                    107.60846875,
+                    109.02596875
+                ]
+            ],
+            "speech_duration": 4.74
+        },
+        {
+            "chunk_start_time": 112.0,
+            "processing_time": 0.093,
+            "detected_speech_segments": [
+                [
+                    108.03096875,
+                    113.02596875
+                ]
+            ],
+            "speech_duration": 5.0
+        },
+        {
+            "chunk_start_time": 116.0,
+            "processing_time": 0.089,
+            "detected_speech_segments": [
+                [
+                    112.03096875,
+                    115.96284375
+                ],
+                [
+                    116.19909375,
+                    117.02596875
+                ]
+            ],
+            "speech_duration": 4.76
+        },
+        {
+            "chunk_start_time": 120.0,
+            "processing_time": 0.095,
+            "detected_speech_segments": [
+                [
+                    116.19971875,
+                    119.60846875
+                ],
+                [
+                    120.67159375,
+                    121.02596875
+                ]
+            ],
+            "speech_duration": 3.76
+        },
+        {
+            "chunk_start_time": 124.0,
+            "processing_time": 0.102,
+            "detected_speech_segments": [
+                [
+                    120.72284375,
+                    121.49909375
+                ],
+                [
+                    122.52846875,
+                    123.94596875
+                ],
+                [
+                    124.50284375,
+                    125.02596875
+                ]
+            ],
+            "speech_duration": 2.72
+        },
+        {
+            "chunk_start_time": 128.0,
+            "processing_time": 0.101,
+            "detected_speech_segments": [
+                [
+                    124.52034375,
+                    128.58721875
                 ]
             ],
             "speech_duration": 4.07
         },
         {
-            "chunk_start_time": 1025.0,
-            "processing_time": 0.079,
+            "chunk_start_time": 132.0,
+            "processing_time": 0.095,
             "detected_speech_segments": [
                 [
-                    1020.03096875,
-                    1020.04784375
+                    128.03096875,
+                    128.60471875
                 ],
                 [
-                    1020.11534375,
-                    1024.04721875
+                    129.46534375,
+                    131.59159375
+                ],
+                [
+                    131.76034375,
+                    132.55346875
                 ]
             ],
-            "speech_duration": 3.95
+            "speech_duration": 3.49
         },
         {
-            "chunk_start_time": 1030.0,
-            "processing_time": 0.078,
+            "chunk_start_time": 136.0,
+            "processing_time": 0.093,
             "detected_speech_segments": [
                 [
-                    1025.03096875,
-                    1026.73534375
+                    132.03096875,
+                    132.62159375
+                ],
+                [
+                    133.49909375,
+                    136.63784375
                 ]
             ],
-            "speech_duration": 1.7
+            "speech_duration": 3.73
+        },
+        {
+            "chunk_start_time": 140.0,
+            "processing_time": 0.0895,
+            "detected_speech_segments": [
+                [
+                    136.03096875,
+                    141.02596875
+                ]
+            ],
+            "speech_duration": 5.0
+        },
+        {
+            "chunk_start_time": 144.0,
+            "processing_time": 0.09,
+            "detected_speech_segments": [
+                [
+                    140.03096875,
+                    142.56221875
+                ],
+                [
+                    142.79846875,
+                    145.02596875
+                ]
+            ],
+            "speech_duration": 4.76
+        },
+        {
+            "chunk_start_time": 148.0,
+            "processing_time": 0.0908,
+            "detected_speech_segments": [
+                [
+                    144.03096875,
+                    145.29659375
+                ],
+                [
+                    145.85346875,
+                    147.64221875
+                ],
+                [
+                    148.16534375,
+                    148.33409375
+                ],
+                [
+                    148.36784375,
+                    149.02596875
+                ]
+            ],
+            "speech_duration": 3.88
+        },
+        {
+            "chunk_start_time": 152.0,
+            "processing_time": 0.092,
+            "detected_speech_segments": [
+                [
+                    148.14909375,
+                    148.31784375
+                ],
+                [
+                    148.40221875,
+                    152.94159375
+                ]
+            ],
+            "speech_duration": 4.71
+        },
+        {
+            "chunk_start_time": 156.0,
+            "processing_time": 0.094,
+            "detected_speech_segments": [
+                [
+                    152.03096875,
+                    152.89159375
+                ],
+                [
+                    153.36409375,
+                    154.30909375
+                ],
+                [
+                    154.81534375,
+                    156.23284375
+                ],
+                [
+                    156.75596875,
+                    157.02596875
+                ]
+            ],
+            "speech_duration": 3.49
+        },
+        {
+            "chunk_start_time": 160.0,
+            "processing_time": 0.094,
+            "detected_speech_segments": [
+                [
+                    156.03096875,
+                    156.25034375
+                ],
+                [
+                    156.82409375,
+                    157.93784375
+                ],
+                [
+                    158.02221875,
+                    159.05159375
+                ],
+                [
+                    159.15284375,
+                    159.57471875
+                ],
+                [
+                    159.79409375,
+                    161.02596875
+                ]
+            ],
+            "speech_duration": 4.02
+        },
+        {
+            "chunk_start_time": 164.0,
+            "processing_time": 0.0972,
+            "detected_speech_segments": [
+                [
+                    160.03096875,
+                    162.76471875
+                ],
+                [
+                    163.32159375,
+                    165.02596875
+                ]
+            ],
+            "speech_duration": 4.44
+        },
+        {
+            "chunk_start_time": 168.0,
+            "processing_time": 0.092,
+            "detected_speech_segments": [
+                [
+                    164.03096875,
+                    165.70159375
+                ],
+                [
+                    166.79846875,
+                    168.95846875
+                ]
+            ],
+            "speech_duration": 3.83
+        },
+        {
+            "chunk_start_time": 172.0,
+            "processing_time": 0.089,
+            "detected_speech_segments": [
+                [
+                    168.03096875,
+                    168.99284375
+                ],
+                [
+                    169.51596875,
+                    171.00096875
+                ],
+                [
+                    172.33409375,
+                    173.02596875
+                ]
+            ],
+            "speech_duration": 3.14
+        },
+        {
+            "chunk_start_time": 176.0,
+            "processing_time": 0.0886,
+            "detected_speech_segments": [
+                [
+                    172.36846875,
+                    173.44846875
+                ],
+                [
+                    173.81971875,
+                    173.87034375
+                ],
+                [
+                    174.52846875,
+                    177.02596875
+                ]
+            ],
+            "speech_duration": 3.63
+        },
+        {
+            "chunk_start_time": 180.0,
+            "processing_time": 0.085,
+            "detected_speech_segments": [
+                [
+                    176.03096875,
+                    180.28346875
+                ]
+            ],
+            "speech_duration": 4.25
+        },
+        {
+            "chunk_start_time": 184.0,
+            "processing_time": 0.086,
+            "detected_speech_segments": [
+                [
+                    180.03096875,
+                    180.30096875
+                ],
+                [
+                    180.97596875,
+                    185.02596875
+                ]
+            ],
+            "speech_duration": 4.32
+        },
+        {
+            "chunk_start_time": 188.0,
+            "processing_time": 0.097,
+            "detected_speech_segments": [
+                [
+                    184.03096875,
+                    186.68034375
+                ],
+                [
+                    187.37221875,
+                    189.02596875
+                ]
+            ],
+            "speech_duration": 4.3
+        },
+        {
+            "chunk_start_time": 192.0,
+            "processing_time": 0.097,
+            "detected_speech_segments": [
+                [
+                    188.03096875,
+                    190.86596875
+                ],
+                [
+                    191.42284375,
+                    193.02596875
+                ]
+            ],
+            "speech_duration": 4.44
+        },
+        {
+            "chunk_start_time": 196.0,
+            "processing_time": 0.086,
+            "detected_speech_segments": [
+                [
+                    192.03096875,
+                    193.90409375
+                ],
+                [
+                    194.62971875,
+                    197.02596875
+                ]
+            ],
+            "speech_duration": 4.27
+        },
+        {
+            "chunk_start_time": 200.0,
+            "processing_time": 0.09,
+            "detected_speech_segments": [
+                [
+                    196.03096875,
+                    197.87034375
+                ],
+                [
+                    198.32596875,
+                    199.99659375
+                ],
+                [
+                    200.31721875,
+                    201.02596875
+                ]
+            ],
+            "speech_duration": 4.22
+        },
+        {
+            "chunk_start_time": 204.0,
+            "processing_time": 0.087,
+            "detected_speech_segments": [
+                [
+                    200.03096875,
+                    200.11534375
+                ],
+                [
+                    200.28409375,
+                    205.02596875
+                ]
+            ],
+            "speech_duration": 4.83
+        },
+        {
+            "chunk_start_time": 208.0,
+            "processing_time": 0.096,
+            "detected_speech_segments": [
+                [
+                    204.03096875,
+                    204.57096875
+                ],
+                [
+                    204.79034375,
+                    205.44846875
+                ],
+                [
+                    205.98846875,
+                    209.02596875
+                ]
+            ],
+            "speech_duration": 4.24
+        },
+        {
+            "chunk_start_time": 212.0,
+            "processing_time": 0.09,
+            "detected_speech_segments": [
+                [
+                    208.03096875,
+                    212.75596875
+                ]
+            ],
+            "speech_duration": 4.72
+        },
+        {
+            "chunk_start_time": 216.0,
+            "processing_time": 0.0915,
+            "detected_speech_segments": [
+                [
+                    212.03096875,
+                    212.79034375
+                ],
+                [
+                    213.49909375,
+                    215.81096875
+                ],
+                [
+                    216.84034375,
+                    217.02596875
+                ]
+            ],
+            "speech_duration": 3.26
+        },
+        {
+            "chunk_start_time": 220.0,
+            "processing_time": 0.09,
+            "detected_speech_segments": [
+                [
+                    216.84096875,
+                    219.69284375
+                ],
+                [
+                    220.26659375,
+                    220.97534375
+                ]
+            ],
+            "speech_duration": 3.56
+        },
+        {
+            "chunk_start_time": 224.0,
+            "processing_time": 0.1014,
+            "detected_speech_segments": [
+                [
+                    220.26721875,
+                    222.24159375
+                ],
+                [
+                    223.22034375,
+                    225.02596875
+                ]
+            ],
+            "speech_duration": 3.78
+        },
+        {
+            "chunk_start_time": 228.0,
+            "processing_time": 0.0973,
+            "detected_speech_segments": [
+                [
+                    224.03096875,
+                    226.52846875
+                ],
+                [
+                    227.37221875,
+                    229.02596875
+                ]
+            ],
+            "speech_duration": 4.15
+        },
+        {
+            "chunk_start_time": 232.0,
+            "processing_time": 0.0987,
+            "detected_speech_segments": [
+                [
+                    228.03096875,
+                    229.70159375
+                ],
+                [
+                    230.14034375,
+                    231.74346875
+                ],
+                [
+                    231.99659375,
+                    233.02596875
+                ]
+            ],
+            "speech_duration": 4.3
+        },
+        {
+            "chunk_start_time": 236.0,
+            "processing_time": 0.0852,
+            "detected_speech_segments": [
+                [
+                    232.03096875,
+                    237.02596875
+                ]
+            ],
+            "speech_duration": 5.0
+        },
+        {
+            "chunk_start_time": 240.0,
+            "processing_time": 0.0908,
+            "detected_speech_segments": [
+                [
+                    236.03096875,
+                    241.02596875
+                ]
+            ],
+            "speech_duration": 5.0
+        },
+        {
+            "chunk_start_time": 244.0,
+            "processing_time": 0.103,
+            "detected_speech_segments": [
+                [
+                    240.03096875,
+                    240.40221875
+                ],
+                [
+                    240.65534375,
+                    245.00909375
+                ]
+            ],
+            "speech_duration": 4.73
+        },
+        {
+            "chunk_start_time": 248.0,
+            "processing_time": 0.088,
+            "detected_speech_segments": [
+                [
+                    244.03096875,
+                    245.33034375
+                ],
+                [
+                    245.75221875,
+                    247.33846875
+                ],
+                [
+                    247.60846875,
+                    249.02596875
+                ]
+            ],
+            "speech_duration": 4.3
+        },
+        {
+            "chunk_start_time": 252.0,
+            "processing_time": 0.092,
+            "detected_speech_segments": [
+                [
+                    248.03096875,
+                    249.66784375
+                ],
+                [
+                    250.19096875,
+                    250.78159375
+                ],
+                [
+                    251.10221875,
+                    253.02596875
+                ]
+            ],
+            "speech_duration": 4.15
+        },
+        {
+            "chunk_start_time": 256.0,
+            "processing_time": 0.092,
+            "detected_speech_segments": [
+                [
+                    252.03096875,
+                    254.68034375
+                ],
+                [
+                    255.28784375,
+                    257.02596875
+                ]
+            ],
+            "speech_duration": 4.39
+        },
+        {
+            "chunk_start_time": 260.0,
+            "processing_time": 0.092,
+            "detected_speech_segments": [
+                [
+                    256.03096875,
+                    258.57909375
+                ],
+                [
+                    259.22034375,
+                    261.02596875
+                ]
+            ],
+            "speech_duration": 4.35
+        },
+        {
+            "chunk_start_time": 264.0,
+            "processing_time": 0.089,
+            "detected_speech_segments": [
+                [
+                    260.03096875,
+                    262.57909375
+                ],
+                [
+                    262.95034375,
+                    265.02596875
+                ]
+            ],
+            "speech_duration": 4.62
+        },
+        {
+            "chunk_start_time": 268.0,
+            "processing_time": 0.091,
+            "detected_speech_segments": [
+                [
+                    264.03096875,
+                    266.84909375
+                ],
+                [
+                    267.81096875,
+                    269.02596875
+                ]
+            ],
+            "speech_duration": 4.03
+        },
+        {
+            "chunk_start_time": 272.0,
+            "processing_time": 0.085,
+            "detected_speech_segments": [
+                [
+                    268.03096875,
+                    269.34721875
+                ],
+                [
+                    270.10659375,
+                    272.48596875
+                ]
+            ],
+            "speech_duration": 3.7
+        },
+        {
+            "chunk_start_time": 276.0,
+            "processing_time": 0.097,
+            "detected_speech_segments": [
+                [
+                    272.03096875,
+                    272.46971875
+                ],
+                [
+                    273.17846875,
+                    273.65096875
+                ],
+                [
+                    273.85346875,
+                    277.02596875
+                ]
+            ],
+            "speech_duration": 4.08
+        },
+        {
+            "chunk_start_time": 280.0,
+            "processing_time": 0.093,
+            "detected_speech_segments": [
+                [
+                    276.03096875,
+                    281.02596875
+                ]
+            ],
+            "speech_duration": 5.0
+        },
+        {
+            "chunk_start_time": 284.0,
+            "processing_time": 0.09,
+            "detected_speech_segments": [
+                [
+                    280.03096875,
+                    284.30034375
+                ]
+            ],
+            "speech_duration": 4.27
+        },
+        {
+            "chunk_start_time": 288.0,
+            "processing_time": 0.09,
+            "detected_speech_segments": [
+                [
+                    284.03096875,
+                    284.33471875
+                ],
+                [
+                    285.00971875,
+                    287.10221875
+                ],
+                [
+                    287.94596875,
+                    288.99221875
+                ]
+            ],
+            "speech_duration": 3.44
+        },
+        {
+            "chunk_start_time": 292.0,
+            "processing_time": 0.0981,
+            "detected_speech_segments": [
+                [
+                    288.03096875,
+                    292.60409375
+                ]
+            ],
+            "speech_duration": 4.57
+        },
+        {
+            "chunk_start_time": 296.0,
+            "processing_time": 0.091,
+            "detected_speech_segments": [
+                [
+                    292.03096875,
+                    292.62159375
+                ],
+                [
+                    293.09409375,
+                    294.62971875
+                ],
+                [
+                    294.88284375,
+                    296.46909375
+                ]
+            ],
+            "speech_duration": 3.71
+        },
+        {
+            "chunk_start_time": 300.0,
+            "processing_time": 0.0951,
+            "detected_speech_segments": [
+                [
+                    296.03096875,
+                    296.50346875
+                ],
+                [
+                    297.49909375,
+                    301.02596875
+                ]
+            ],
+            "speech_duration": 4.0
+        },
+        {
+            "chunk_start_time": 304.0,
+            "processing_time": 0.096,
+            "detected_speech_segments": [
+                [
+                    300.03096875,
+                    305.00909375
+                ]
+            ],
+            "speech_duration": 4.98
+        },
+        {
+            "chunk_start_time": 308.0,
+            "processing_time": 0.089,
+            "detected_speech_segments": [
+                [
+                    304.03096875,
+                    308.84034375
+                ]
+            ],
+            "speech_duration": 4.81
+        },
+        {
+            "chunk_start_time": 312.0,
+            "processing_time": 0.0921,
+            "detected_speech_segments": [
+                [
+                    308.03096875,
+                    310.42721875
+                ],
+                [
+                    311.30471875,
+                    313.02596875
+                ]
+            ],
+            "speech_duration": 4.12
+        },
+        {
+            "chunk_start_time": 316.0,
+            "processing_time": 0.093,
+            "detected_speech_segments": [
+                [
+                    312.62159375,
+                    313.66784375
+                ],
+                [
+                    313.93784375,
+                    316.82346875
+                ]
+            ],
+            "speech_duration": 3.93
+        },
+        {
+            "chunk_start_time": 320.0,
+            "processing_time": 0.1009,
+            "detected_speech_segments": [
+                [
+                    316.03096875,
+                    316.80721875
+                ],
+                [
+                    317.31346875,
+                    321.02596875
+                ]
+            ],
+            "speech_duration": 4.49
+        },
+        {
+            "chunk_start_time": 324.0,
+            "processing_time": 0.099,
+            "detected_speech_segments": [
+                [
+                    320.03096875,
+                    321.31346875
+                ],
+                [
+                    321.76909375,
+                    324.28346875
+                ]
+            ],
+            "speech_duration": 3.8
+        },
+        {
+            "chunk_start_time": 328.0,
+            "processing_time": 0.0926,
+            "detected_speech_segments": [
+                [
+                    324.03096875,
+                    324.52034375
+                ],
+                [
+                    324.99284375,
+                    329.02596875
+                ]
+            ],
+            "speech_duration": 4.52
+        },
+        {
+            "chunk_start_time": 332.0,
+            "processing_time": 0.088,
+            "detected_speech_segments": [
+                [
+                    328.03096875,
+                    328.57096875
+                ],
+                [
+                    328.68909375,
+                    329.61721875
+                ],
+                [
+                    331.23721875,
+                    332.48596875
+                ]
+            ],
+            "speech_duration": 2.72
+        },
+        {
+            "chunk_start_time": 336.0,
+            "processing_time": 0.092,
+            "detected_speech_segments": [
+                [
+                    332.03096875,
+                    332.48659375
+                ],
+                [
+                    333.98846875,
+                    337.02596875
+                ]
+            ],
+            "speech_duration": 3.49
+        },
+        {
+            "chunk_start_time": 340.0,
+            "processing_time": 0.091,
+            "detected_speech_segments": [
+                [
+                    336.03096875,
+                    337.33034375
+                ],
+                [
+                    338.08971875,
+                    341.02596875
+                ]
+            ],
+            "speech_duration": 4.24
+        },
+        {
+            "chunk_start_time": 344.0,
+            "processing_time": 0.09,
+            "detected_speech_segments": [
+                [
+                    340.03096875,
+                    342.56221875
+                ],
+                [
+                    343.42284375,
+                    345.02596875
+                ]
+            ],
+            "speech_duration": 4.13
+        },
+        {
+            "chunk_start_time": 348.0,
+            "processing_time": 0.0961,
+            "detected_speech_segments": [
+                [
+                    344.03096875,
+                    346.86596875
+                ],
+                [
+                    347.57471875,
+                    348.89096875
+                ]
+            ],
+            "speech_duration": 4.15
+        },
+        {
+            "chunk_start_time": 352.0,
+            "processing_time": 0.094,
+            "detected_speech_segments": [
+                [
+                    348.03096875,
+                    348.94221875
+                ],
+                [
+                    350.64659375,
+                    353.02596875
+                ]
+            ],
+            "speech_duration": 3.29
+        },
+        {
+            "chunk_start_time": 356.0,
+            "processing_time": 0.0861,
+            "detected_speech_segments": [
+                [
+                    352.03096875,
+                    355.22034375
+                ],
+                [
+                    355.57471875,
+                    357.02596875
+                ]
+            ],
+            "speech_duration": 4.64
+        },
+        {
+            "chunk_start_time": 360.0,
+            "processing_time": 0.088,
+            "detected_speech_segments": [
+                [
+                    356.03096875,
+                    357.93784375
+                ],
+                [
+                    358.22471875,
+                    359.62534375
+                ],
+                [
+                    360.06409375,
+                    361.02596875
+                ]
+            ],
+            "speech_duration": 4.27
+        },
+        {
+            "chunk_start_time": 364.0,
+            "processing_time": 0.09,
+            "detected_speech_segments": [
+                [
+                    360.03096875,
+                    365.02596875
+                ]
+            ],
+            "speech_duration": 5.0
+        },
+        {
+            "chunk_start_time": 368.0,
+            "processing_time": 0.089,
+            "detected_speech_segments": [
+                [
+                    364.03096875,
+                    365.88721875
+                ],
+                [
+                    366.08971875,
+                    368.68846875
+                ]
+            ],
+            "speech_duration": 4.46
+        },
+        {
+            "chunk_start_time": 372.0,
+            "processing_time": 0.092,
+            "detected_speech_segments": [
+                [
+                    368.03096875,
+                    371.08534375
+                ],
+                [
+                    371.57471875,
+                    373.02596875
+                ]
+            ],
+            "speech_duration": 4.51
+        },
+        {
+            "chunk_start_time": 376.0,
+            "processing_time": 0.0941,
+            "detected_speech_segments": [
+                [
+                    372.03096875,
+                    377.02596875
+                ]
+            ],
+            "speech_duration": 5.0
+        },
+        {
+            "chunk_start_time": 380.0,
+            "processing_time": 0.0911,
+            "detected_speech_segments": [
+                [
+                    376.03096875,
+                    381.02596875
+                ]
+            ],
+            "speech_duration": 5.0
+        },
+        {
+            "chunk_start_time": 384.0,
+            "processing_time": 0.0926,
+            "detected_speech_segments": [
+                [
+                    380.03096875,
+                    382.61284375
+                ],
+                [
+                    383.01784375,
+                    385.02596875
+                ]
+            ],
+            "speech_duration": 4.59
+        },
+        {
+            "chunk_start_time": 388.0,
+            "processing_time": 0.102,
+            "detected_speech_segments": [
+                [
+                    384.03096875,
+                    386.86596875
+                ],
+                [
+                    387.33846875,
+                    389.02596875
+                ]
+            ],
+            "speech_duration": 4.52
+        },
+        {
+            "chunk_start_time": 392.0,
+            "processing_time": 0.1051,
+            "detected_speech_segments": [
+                [
+                    388.03096875,
+                    391.37221875
+                ],
+                [
+                    391.72659375,
+                    393.02596875
+                ]
+            ],
+            "speech_duration": 4.64
+        },
+        {
+            "chunk_start_time": 396.0,
+            "processing_time": 0.092,
+            "detected_speech_segments": [
+                [
+                    392.03096875,
+                    393.39784375
+                ],
+                [
+                    393.71846875,
+                    396.09784375
+                ],
+                [
+                    396.68846875,
+                    397.02596875
+                ]
+            ],
+            "speech_duration": 4.08
+        },
+        {
+            "chunk_start_time": 400.0,
+            "processing_time": 0.0956,
+            "detected_speech_segments": [
+                [
+                    396.72284375,
+                    399.06846875
+                ],
+                [
+                    399.79409375,
+                    401.02596875
+                ]
+            ],
+            "speech_duration": 3.58
+        },
+        {
+            "chunk_start_time": 404.0,
+            "processing_time": 0.0972,
+            "detected_speech_segments": [
+                [
+                    400.03096875,
+                    402.30909375
+                ],
+                [
+                    402.96721875,
+                    405.02596875
+                ]
+            ],
+            "speech_duration": 4.34
+        },
+        {
+            "chunk_start_time": 408.0,
+            "processing_time": 0.091,
+            "detected_speech_segments": [
+                [
+                    404.03096875,
+                    406.22471875
+                ],
+                [
+                    406.56221875,
+                    409.02596875
+                ]
+            ],
+            "speech_duration": 4.66
+        },
+        {
+            "chunk_start_time": 412.0,
+            "processing_time": 0.0967,
+            "detected_speech_segments": [
+                [
+                    408.03096875,
+                    410.64659375
+                ],
+                [
+                    411.06846875,
+                    413.02596875
+                ]
+            ],
+            "speech_duration": 4.57
+        },
+        {
+            "chunk_start_time": 416.0,
+            "processing_time": 0.101,
+            "detected_speech_segments": [
+                [
+                    412.03096875,
+                    413.97159375
+                ],
+                [
+                    415.59159375,
+                    417.02596875
+                ]
+            ],
+            "speech_duration": 3.38
+        },
+        {
+            "chunk_start_time": 420.0,
+            "processing_time": 0.1,
+            "detected_speech_segments": [
+                [
+                    416.03096875,
+                    417.71846875
+                ],
+                [
+                    418.22471875,
+                    420.33409375
+                ],
+                [
+                    420.78971875,
+                    421.02596875
+                ]
+            ],
+            "speech_duration": 4.03
+        },
+        {
+            "chunk_start_time": 424.0,
+            "processing_time": 0.0976,
+            "detected_speech_segments": [
+                [
+                    420.03096875,
+                    420.35159375
+                ],
+                [
+                    420.80721875,
+                    423.28784375
+                ],
+                [
+                    423.47346875,
+                    425.02596875
+                ]
+            ],
+            "speech_duration": 4.35
+        },
+        {
+            "chunk_start_time": 428.0,
+            "processing_time": 0.0945,
+            "detected_speech_segments": [
+                [
+                    424.03096875,
+                    425.36409375
+                ],
+                [
+                    425.85346875,
+                    429.02596875
+                ]
+            ],
+            "speech_duration": 4.51
+        },
+        {
+            "chunk_start_time": 432.0,
+            "processing_time": 0.087,
+            "detected_speech_segments": [
+                [
+                    428.03096875,
+                    429.34721875
+                ],
+                [
+                    430.12346875,
+                    432.48596875
+                ]
+            ],
+            "speech_duration": 3.68
+        },
+        {
+            "chunk_start_time": 436.0,
+            "processing_time": 0.0847,
+            "detected_speech_segments": [
+                [
+                    432.03096875,
+                    432.52034375
+                ],
+                [
+                    432.89159375,
+                    434.98409375
+                ],
+                [
+                    435.32159375,
+                    437.02596875
+                ]
+            ],
+            "speech_duration": 4.29
+        },
+        {
+            "chunk_start_time": 440.0,
+            "processing_time": 0.0854,
+            "detected_speech_segments": [
+                [
+                    436.03096875,
+                    438.68034375
+                ],
+                [
+                    439.22034375,
+                    440.95846875
+                ]
+            ],
+            "speech_duration": 4.39
+        },
+        {
+            "chunk_start_time": 444.0,
+            "processing_time": 0.096,
+            "detected_speech_segments": [
+                [
+                    440.03096875,
+                    441.00971875
+                ],
+                [
+                    441.38096875,
+                    442.24159375
+                ],
+                [
+                    442.95034375,
+                    444.62096875
+                ]
+            ],
+            "speech_duration": 3.51
+        },
+        {
+            "chunk_start_time": 448.0,
+            "processing_time": 0.093,
+            "detected_speech_segments": [
+                [
+                    444.03096875,
+                    444.67221875
+                ],
+                [
+                    445.36409375,
+                    446.15721875
+                ],
+                [
+                    446.47784375,
+                    447.76034375
+                ],
+                [
+                    448.06409375,
+                    449.02596875
+                ]
+            ],
+            "speech_duration": 3.68
+        },
+        {
+            "chunk_start_time": 452.0,
+            "processing_time": 0.092,
+            "detected_speech_segments": [
+                [
+                    448.03096875,
+                    450.12346875
+                ],
+                [
+                    450.35971875,
+                    453.02596875
+                ]
+            ],
+            "speech_duration": 4.76
+        },
+        {
+            "chunk_start_time": 456.0,
+            "processing_time": 0.095,
+            "detected_speech_segments": [
+                [
+                    452.03096875,
+                    452.65534375
+                ],
+                [
+                    452.89159375,
+                    457.02596875
+                ]
+            ],
+            "speech_duration": 4.76
+        },
+        {
+            "chunk_start_time": 460.0,
+            "processing_time": 0.094,
+            "detected_speech_segments": [
+                [
+                    456.03096875,
+                    457.78596875
+                ],
+                [
+                    458.03909375,
+                    461.02596875
+                ]
+            ],
+            "speech_duration": 4.74
+        },
+        {
+            "chunk_start_time": 464.0,
+            "processing_time": 0.1007,
+            "detected_speech_segments": [
+                [
+                    460.03096875,
+                    462.27534375
+                ],
+                [
+                    462.96721875,
+                    465.02596875
+                ]
+            ],
+            "speech_duration": 4.3
+        },
+        {
+            "chunk_start_time": 468.0,
+            "processing_time": 0.0976,
+            "detected_speech_segments": [
+                [
+                    464.03096875,
+                    466.62971875
+                ],
+                [
+                    466.98409375,
+                    469.02596875
+                ]
+            ],
+            "speech_duration": 4.64
+        },
+        {
+            "chunk_start_time": 472.0,
+            "processing_time": 0.103,
+            "detected_speech_segments": [
+                [
+                    468.21659375,
+                    471.50721875
+                ],
+                [
+                    472.38471875,
+                    472.87409375
+                ]
+            ],
+            "speech_duration": 3.78
+        },
+        {
+            "chunk_start_time": 476.0,
+            "processing_time": 0.097,
+            "detected_speech_segments": [
+                [
+                    472.41909375,
+                    474.69721875
+                ],
+                [
+                    475.03471875,
+                    477.02596875
+                ]
+            ],
+            "speech_duration": 4.27
+        },
+        {
+            "chunk_start_time": 480.0,
+            "processing_time": 0.095,
+            "detected_speech_segments": [
+                [
+                    476.03096875,
+                    477.29659375
+                ],
+                [
+                    477.90409375,
+                    481.02596875
+                ]
+            ],
+            "speech_duration": 4.39
+        },
+        {
+            "chunk_start_time": 484.0,
+            "processing_time": 0.084,
+            "detected_speech_segments": [
+                [
+                    480.03096875,
+                    481.39784375
+                ],
+                [
+                    481.87034375,
+                    484.99221875
+                ]
+            ],
+            "speech_duration": 4.49
+        },
+        {
+            "chunk_start_time": 488.0,
+            "processing_time": 0.09,
+            "detected_speech_segments": [
+                [
+                    484.03096875,
+                    485.14471875
+                ],
+                [
+                    485.39784375,
+                    489.02596875
+                ]
+            ],
+            "speech_duration": 4.74
+        },
+        {
+            "chunk_start_time": 492.0,
+            "processing_time": 0.0942,
+            "detected_speech_segments": [
+                [
+                    488.03096875,
+                    493.00909375
+                ]
+            ],
+            "speech_duration": 4.98
+        },
+        {
+            "chunk_start_time": 496.0,
+            "processing_time": 0.094,
+            "detected_speech_segments": [
+                [
+                    492.03096875,
+                    495.08534375
+                ]
+            ],
+            "speech_duration": 3.05
+        },
+        {
+            "chunk_start_time": 500.0,
+            "processing_time": 0.095,
+            "detected_speech_segments": [
+                [
+                    496.89159375,
+                    498.03909375
+                ],
+                [
+                    499.84471875,
+                    501.02596875
+                ]
+            ],
+            "speech_duration": 2.33
+        },
+        {
+            "chunk_start_time": 504.0,
+            "processing_time": 0.105,
+            "detected_speech_segments": [
+                [
+                    500.03096875,
+                    502.76471875
+                ],
+                [
+                    503.22034375,
+                    504.19909375
+                ],
+                [
+                    504.75596875,
+                    505.02596875
+                ]
+            ],
+            "speech_duration": 3.98
+        },
+        {
+            "chunk_start_time": 508.0,
+            "processing_time": 0.1035,
+            "detected_speech_segments": [
+                [
+                    504.03096875,
+                    504.26721875
+                ],
+                [
+                    504.70596875,
+                    509.02596875
+                ]
+            ],
+            "speech_duration": 4.56
+        },
+        {
+            "chunk_start_time": 512.0,
+            "processing_time": 0.1045,
+            "detected_speech_segments": [
+                [
+                    508.03096875,
+                    511.05159375
+                ],
+                [
+                    511.92909375,
+                    513.02596875
+                ]
+            ],
+            "speech_duration": 4.12
+        },
+        {
+            "chunk_start_time": 516.0,
+            "processing_time": 0.0989,
+            "detected_speech_segments": [
+                [
+                    512.03096875,
+                    514.42721875
+                ],
+                [
+                    514.64659375,
+                    516.38471875
+                ]
+            ],
+            "speech_duration": 4.13
+        },
+        {
+            "chunk_start_time": 520.0,
+            "processing_time": 0.094,
+            "detected_speech_segments": [
+                [
+                    516.03096875,
+                    516.40221875
+                ],
+                [
+                    516.92534375,
+                    519.35534375
+                ],
+                [
+                    520.38471875,
+                    521.02596875
+                ]
+            ],
+            "speech_duration": 3.44
+        },
+        {
+            "chunk_start_time": 524.0,
+            "processing_time": 0.092,
+            "detected_speech_segments": [
+                [
+                    520.38534375,
+                    524.18221875
+                ]
+            ],
+            "speech_duration": 3.8
+        },
+        {
+            "chunk_start_time": 528.0,
+            "processing_time": 0.089,
+            "detected_speech_segments": [
+                [
+                    525.53284375,
+                    529.02596875
+                ]
+            ],
+            "speech_duration": 3.49
+        },
+        {
+            "chunk_start_time": 532.0,
+            "processing_time": 0.099,
+            "detected_speech_segments": [
+                [
+                    528.03096875,
+                    529.87034375
+                ],
+                [
+                    531.05159375,
+                    533.02596875
+                ]
+            ],
+            "speech_duration": 3.81
+        },
+        {
+            "chunk_start_time": 536.0,
+            "processing_time": 0.095,
+            "detected_speech_segments": [
+                [
+                    532.03096875,
+                    535.27096875
+                ],
+                [
+                    536.36784375,
+                    537.02596875
+                ]
+            ],
+            "speech_duration": 3.9
+        },
+        {
+            "chunk_start_time": 540.0,
+            "processing_time": 0.095,
+            "detected_speech_segments": [
+                [
+                    536.40221875,
+                    538.15721875
+                ],
+                [
+                    539.97971875,
+                    541.02596875
+                ]
+            ],
+            "speech_duration": 2.8
+        },
+        {
+            "chunk_start_time": 544.0,
+            "processing_time": 0.094,
+            "detected_speech_segments": [
+                [
+                    540.03096875,
+                    541.90409375
+                ],
+                [
+                    542.27534375,
+                    543.84471875
+                ],
+                [
+                    544.60409375,
+                    545.02596875
+                ]
+            ],
+            "speech_duration": 3.86
+        },
+        {
+            "chunk_start_time": 548.0,
+            "processing_time": 0.093,
+            "detected_speech_segments": [
+                [
+                    544.62159375,
+                    546.68034375
+                ],
+                [
+                    546.89971875,
+                    548.46909375
+                ]
+            ],
+            "speech_duration": 3.63
+        },
+        {
+            "chunk_start_time": 552.0,
+            "processing_time": 0.097,
+            "detected_speech_segments": [
+                [
+                    548.03096875,
+                    548.50346875
+                ],
+                [
+                    549.04346875,
+                    552.03034375
+                ],
+                [
+                    552.41846875,
+                    553.02596875
+                ]
+            ],
+            "speech_duration": 4.07
+        },
+        {
+            "chunk_start_time": 556.0,
+            "processing_time": 0.0959,
+            "detected_speech_segments": [
+                [
+                    552.43596875,
+                    555.11909375
+                ],
+                [
+                    555.59159375,
+                    556.99221875
+                ]
+            ],
+            "speech_duration": 4.08
+        },
+        {
+            "chunk_start_time": 560.0,
+            "processing_time": 0.094,
+            "detected_speech_segments": [
+                [
+                    556.03096875,
+                    557.90409375
+                ],
+                [
+                    558.42721875,
+                    559.91221875
+                ]
+            ],
+            "speech_duration": 3.36
+        },
+        {
+            "chunk_start_time": 564.0,
+            "processing_time": 0.09,
+            "detected_speech_segments": [
+                [
+                    561.06034375,
+                    562.86596875
+                ],
+                [
+                    563.47346875,
+                    565.02596875
+                ]
+            ],
+            "speech_duration": 3.36
+        },
+        {
+            "chunk_start_time": 568.0,
+            "processing_time": 0.0901,
+            "detected_speech_segments": [
+                [
+                    564.03096875,
+                    566.79846875
+                ],
+                [
+                    567.10221875,
+                    568.99221875
+                ]
+            ],
+            "speech_duration": 4.66
+        },
+        {
+            "chunk_start_time": 572.0,
+            "processing_time": 0.093,
+            "detected_speech_segments": [
+                [
+                    568.03096875,
+                    573.02596875
+                ]
+            ],
+            "speech_duration": 4.99
+        },
+        {
+            "chunk_start_time": 576.0,
+            "processing_time": 0.094,
+            "detected_speech_segments": [
+                [
+                    572.03096875,
+                    573.29659375
+                ],
+                [
+                    573.49909375,
+                    574.86596875
+                ],
+                [
+                    575.40596875,
+                    577.02596875
+                ]
+            ],
+            "speech_duration": 4.25
+        },
+        {
+            "chunk_start_time": 580.0,
+            "processing_time": 0.087,
+            "detected_speech_segments": [
+                [
+                    576.03096875,
+                    578.46096875
+                ],
+                [
+                    579.43971875,
+                    581.02596875
+                ]
+            ],
+            "speech_duration": 4.02
+        },
+        {
+            "chunk_start_time": 584.0,
+            "processing_time": 0.0892,
+            "detected_speech_segments": [
+                [
+                    580.03096875,
+                    581.66784375
+                ],
+                [
+                    582.19096875,
+                    585.02596875
+                ]
+            ],
+            "speech_duration": 4.47
+        },
+        {
+            "chunk_start_time": 588.0,
+            "processing_time": 0.0836,
+            "detected_speech_segments": [
+                [
+                    584.03096875,
+                    585.26284375
+                ],
+                [
+                    585.60034375,
+                    589.02596875
+                ]
+            ],
+            "speech_duration": 4.66
+        },
+        {
+            "chunk_start_time": 592.0,
+            "processing_time": 0.0913,
+            "detected_speech_segments": [
+                [
+                    588.03096875,
+                    589.85346875
+                ],
+                [
+                    590.49471875,
+                    592.46909375
+                ]
+            ],
+            "speech_duration": 3.8
+        },
+        {
+            "chunk_start_time": 596.0,
+            "processing_time": 0.092,
+            "detected_speech_segments": [
+                [
+                    592.03096875,
+                    592.50346875
+                ],
+                [
+                    592.94221875,
+                    596.38471875
+                ]
+            ],
+            "speech_duration": 3.91
+        },
+        {
+            "chunk_start_time": 600.0,
+            "processing_time": 0.0909,
+            "detected_speech_segments": [
+                [
+                    596.03096875,
+                    596.40221875
+                ],
+                [
+                    597.81971875,
+                    600.97534375
+                ]
+            ],
+            "speech_duration": 3.53
+        },
+        {
+            "chunk_start_time": 604.0,
+            "processing_time": 0.1,
+            "detected_speech_segments": [
+                [
+                    600.03096875,
+                    602.07284375
+                ],
+                [
+                    602.93346875,
+                    605.02596875
+                ]
+            ],
+            "speech_duration": 4.13
+        },
+        {
+            "chunk_start_time": 608.0,
+            "processing_time": 0.0993,
+            "detected_speech_segments": [
+                [
+                    604.03096875,
+                    606.68034375
+                ],
+                [
+                    607.22034375,
+                    608.35096875
+                ],
+                [
+                    608.75596875,
+                    609.02596875
+                ]
+            ],
+            "speech_duration": 4.05
+        },
+        {
+            "chunk_start_time": 612.0,
+            "processing_time": 0.1014,
+            "detected_speech_segments": [
+                [
+                    608.03096875,
+                    608.36846875
+                ],
+                [
+                    608.75659375,
+                    613.02596875
+                ]
+            ],
+            "speech_duration": 4.61
+        },
+        {
+            "chunk_start_time": 616.0,
+            "processing_time": 0.095,
+            "detected_speech_segments": [
+                [
+                    612.04784375,
+                    616.67159375
+                ]
+            ],
+            "speech_duration": 4.62
         }
     ]
 }

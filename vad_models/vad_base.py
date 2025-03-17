@@ -1,22 +1,16 @@
+import json
 import logging
+import os
 from abc import ABC, abstractmethod
+from collections import deque
 from dataclasses import dataclass, field
 from enum import Enum
-from typing import Optional, List
-import json
+from typing import List, Optional
 
 import numpy as np
-from pyannote.core import Annotation, Segment
+from pyannote.core import Annotation, Segment, Timeline
 from pyannote.metrics.detection import DetectionAccuracy, DetectionErrorRate
 from sklearn.metrics import roc_auc_score
-
-logging.basicConfig(
-    level=logging.INFO,  # Adjust to DEBUG for more details
-    format="%(asctime)s - %(levelname)s - %(message)s",
-    handlers=[
-        logging.FileHandler("vad_results.log", mode="w"),  # Log to file
-    ],
-)
 
 
 class VADType(str, Enum):
@@ -60,17 +54,23 @@ class VADBase(ABC):
     roc_auc: float = 0.0
 
     vad_result: Annotation = field(default_factory=Annotation)
+    vad_segments: deque[Annotation] = deque()
     current_offset: float = 0.0
     frame_duration: float = 0.01
     chunk_logs: List[dict] = field(default_factory=list)  # Stores per-chunk logs
 
     @abstractmethod
-    def process_audio_chunk(self, audio_chunk: np.ndarray):
+    def process_audio_chunk(self, audio_chunk: np.ndarray) -> Annotation:
         pass
 
-    @abstractmethod
     def aggregate_results(self):
-        pass
+        aggregated_timeline = Timeline()
+        for vad_result in self.vad_segments:
+            aggregated_timeline = aggregated_timeline | vad_result.get_timeline()
+
+        self.vad_result = Annotation()
+        for segment in aggregated_timeline.support():
+            self.vad_result[segment] = "speech"
 
     def calcMetrics(self):
         """Computes VAD evaluation metrics if a label file is provided."""
@@ -124,14 +124,16 @@ class VADBase(ABC):
 
         if len(ground_truth_labels) == 0 or len(vad_labels) == 0:
             logging.warning(
-                "Warning: Empty ground truth or VAD labels. Skipping ROC-AUC calculation."
+                "Warning: Empty ground truth or VAD labels. \
+                    Skipping ROC-AUC calculation."
             )
             self.roc_auc = float("nan")
         else:
             self.roc_auc = roc_auc_score(ground_truth_labels, vad_labels)
 
         logging.info(
-            "Metrics calculated - Accuracy: %.4f, DER: %.4f, Missed: %.4f, False Alarm: %.4f, ROC AUC: %.4f",
+            "Metrics calculated - Accuracy: %.4f, \
+                DER: %.4f, Missed: %.4f, False Alarm: %.4f, ROC AUC: %.4f",
             self.detection_accuracy,
             self.detection_error_rate_value,
             self.missed_detection_rate,
@@ -139,13 +141,28 @@ class VADBase(ABC):
             self.roc_auc,
         )
 
-    def log_vad(self):
+    def log_vad(self, output_file_dir):
         """
-        Logs overall VAD results, runs metrics if labels exist, and saves structured JSON.
+        Logs overall VAD results, runs metrics if labels exist, \
+            and saves structured JSON.
         """
+
+        log_dir = os.path.join(output_file_dir, "logs")
+        logging.basicConfig(
+            level=logging.INFO,  # Adjust to DEBUG for more details
+            format="%(asctime)s - %(levelname)s - %(message)s",
+            handlers=[
+                logging.FileHandler(f"{log_dir}/vad_run.log", mode="w"),  # Log to file
+                logging.StreamHandler()
+            ],
+        )
+
         if self.label_file_path:
             logging.info("Running VAD metric calculations...")
             self.calcMetrics()
+        else:
+            logging.info("Empty ground truth or VAD labels")
+            self.aggregate_results()
 
         # Compute overall stats
         total_chunks = len(self.chunk_logs)
@@ -181,8 +198,21 @@ class VADBase(ABC):
             "chunk_logs": self.chunk_logs,
         }
 
+        result_dir = os.path.join(output_file_dir, "results")
+        os.makedirs(result_dir, exist_ok=True)
+
         # Save as JSON
-        with open("./logs/vad_results.json", "w", encoding="utf-8") as json_file:
+        json_path = os.path.join(result_dir, "vad_results.json")
+        with open(json_path, "w", encoding="utf-8") as json_file:
             json.dump(structured_data, json_file, indent=4)
+
+        # Save and save to LAB format
+        lab_path = os.path.join(result_dir, "vad_results.lab")
+        with open(lab_path, "w", encoding="utf-8") as lab_file:
+            for segment, _, label in self.vad_result.itertracks(yield_label=True):
+                start_time = segment.start
+                end_time = segment.end
+                label = label if label else "speech"
+                lab_file.write(f"{start_time:.3f} {end_time:.3f} {label}\n")
 
         logging.info("Final structured logs saved: vad_results.json")

@@ -1,14 +1,13 @@
-from collections import deque
 from typing import Optional
 
-from utils import time_it
 import numpy as np
 import torch
 import yaml
 from pyannote.audio import Model
 from pyannote.audio.pipelines import VoiceActivityDetection
-from pyannote.core import Annotation, Segment, Timeline
+from pyannote.core import Annotation, Segment
 
+from utils import time_it
 from vad_models.vad_base import VADBase
 
 
@@ -21,7 +20,6 @@ class PyannoteStreamingVAD(VADBase):
         label_file_path: Optional[str] = None,
     ):
         super().__init__(chunk_size, overlap, sample_rate, label_file_path)
-        self.vad_segments: deque[Annotation] = deque()
 
         with open("configs/vad_config.yaml", "r", encoding="UTF-8") as file:
             config = yaml.safe_load(file)
@@ -39,7 +37,8 @@ class PyannoteStreamingVAD(VADBase):
     @time_it
     def process_audio_chunk(self, audio_chunk: np.ndarray) -> Annotation:
         """
-        Processes a single audio chunk, returns the VAD result **on the fly**, and updates the global aggregation.
+        Processes a single audio chunk, returns the VAD result on the fly, and \
+            updates the global aggregation.
         """
         audio_tensor = torch.tensor(audio_chunk, dtype=torch.float32)
 
@@ -57,12 +56,3 @@ class PyannoteStreamingVAD(VADBase):
         self.current_offset += self.chunk_size - self.overlap
 
         return adjusted_annotation
-
-    def aggregate_results(self):
-        aggregated_timeline = Timeline()
-        for vad_result in self.vad_segments:
-            aggregated_timeline = aggregated_timeline | vad_result.get_timeline()
-
-        self.vad_result = Annotation()
-        for segment in aggregated_timeline.support():
-            self.vad_result[segment] = "speech"

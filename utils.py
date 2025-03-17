@@ -17,37 +17,55 @@ logging.basicConfig(
 
 def audio_stream_from_wav(file_path, chunk_size=5.0, overlap=1.0, sample_rate=16000):
     """
-    Simulates an audio stream from a WAV file by yielding audio chunks.
+    Reads a WAV file in chunks of 'chunk_size' seconds, with 'overlap' seconds overlap.
+    This version ensures proper alignment of chunks like audio_stream_from_wav().
 
     :param file_path: Path to the WAV file.
     :param chunk_size: Duration of each chunk (default: 5 seconds).
-    :param overlap: Duration of overlap between consecutive chunks (default: 1 seconds).
+    :param overlap: Overlap between consecutive chunks (default: 1 second).
     :param sample_rate: Expected sample rate (default: 16000Hz).
-    :yield: NumPy array representing the audio chunk.
+    :yield: NumPy array (1, time) representing an audio chunk.
     """
-    chunk_samples = int(chunk_size * sample_rate)
-    step_size = int((chunk_size - overlap) * sample_rate)
+    chunk_samples = int(chunk_size * sample_rate)  # Convert chunk size to samples
+    step_size = int(
+        (chunk_size - overlap) * sample_rate
+    )  # Step size for moving to next chunk
 
     with sf.SoundFile(file_path, "r") as sf_file:
         if sf_file.samplerate != sample_rate:
             raise ValueError(
-                f"Sample rate mismatch! Expected {sample_rate}, but got \
-                      {sf_file.samplerate}"
+                f"Sample rate mismatch! Expected {sample_rate}, \
+                    but got {sf_file.samplerate}"
             )
 
-        start = 0  # Keeps track of the starting position of each chunk
-        for block in sf.blocks(
-            file=file_path,
-            blocksize=step_size,
-            overlap=int(overlap * sample_rate),
-            dtype="float32",
-        ):
-            # Ensure the block is exactly chunk_samples long
+        # Start reading in correct step intervals
+        position = 0  # Keeps track of the file position
+
+        while position + chunk_samples <= len(sf_file):
+            sf_file.seek(position)  # Move to the correct start position
+            block = sf_file.read(chunk_samples, dtype="float32")
+
+            # Ensure chunk is the correct size, pad if necessary
             if len(block) < chunk_samples:
                 block = np.pad(block, (0, chunk_samples - len(block)), mode="constant")
 
-            yield np.expand_dims(block[:chunk_samples], axis=0)  # (1, time)
-            start += step_size
+            yield np.expand_dims(block, axis=0)  # Shape: (1, time)
+
+            # Move position forward by step_size (which accounts for overlap)
+            position += step_size
+
+        # Handle the last chunk if any remaining samples exist
+        if position < sf_file.frames:
+            sf_file.seek(position)
+            last_block = sf_file.read(chunk_samples, dtype="float32")
+
+            # Pad the last chunk if it's smaller than expected
+            if len(last_block) < chunk_samples:
+                last_block = np.pad(
+                    last_block, (0, chunk_samples - len(last_block)), mode="constant"
+                )
+
+            yield np.expand_dims(last_block, axis=0)  # (1, time)
 
 
 def time_it(func):

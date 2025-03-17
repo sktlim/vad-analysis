@@ -1,12 +1,12 @@
-from collections import deque
 from typing import Optional
 
 import numpy as np
 import webrtcvad
-from pyannote.core import Annotation, Segment, Timeline
+from pyannote.core import Annotation, Segment
 
-from vad_models.vad_base import VADBase
 from utils import time_it
+from vad_models.vad_base import VADBase
+
 
 class WebRTCVAD(VADBase):
     def __init__(
@@ -30,13 +30,11 @@ class WebRTCVAD(VADBase):
             (self.frame_duration_ms / 1000) * self.sample_rate
         )  # Convert ms to samples
 
-        # Store detected speech segments across chunks
-        self.vad_segments: deque[Annotation] = deque()
-
     @time_it
     def process_audio_chunk(self, audio_chunk: np.ndarray) -> Annotation:
         """
-        Processes a single audio chunk using WebRTC VAD and appends results to self.vad_segments.
+        Processes a single audio chunk using WebRTC VAD and \
+            appends results to self.vad_segments.
         """
         if len(audio_chunk.shape) == 1:  # Convert mono to (1, time)
             audio_chunk = np.expand_dims(audio_chunk, axis=0)
@@ -67,13 +65,3 @@ class WebRTCVAD(VADBase):
         self.current_offset += self.chunk_size - self.overlap
 
         return vad_annotation
-
-    def aggregate_results(self):
-        """Aggregates overlapped VAD results into a single annotation object."""
-        aggregated_timeline = Timeline()
-        for vad_result in self.vad_segments:
-            aggregated_timeline = aggregated_timeline | vad_result.get_timeline()
-
-        self.vad_result = Annotation()
-        for segment in aggregated_timeline.support():
-            self.vad_result[segment] = "speech"

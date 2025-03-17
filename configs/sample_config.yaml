@@ -1,5 +1,8 @@
-vad_model: "silero"
-sample_rate: 16000
-chunk_size: 5
-overlap: 1
-AUTH_TOKEN: ""
+vad_model: "pyannote" # "silero", "webrtc"
+sample_rate: 16000 # Sampling rate of VAD
+chunk_size: 5 # Size of window for audio chunk
+overlap: 1 # Overlap between prior and next window
+
+input_audio_dir:
+lab_files_dir:
+output_files_dir:
