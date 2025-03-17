@@ -1,7 +1,9 @@
 configs/vad_config.yaml
 __pycache__
 __pycache__/
+vad_models/__pycache__
 classes_class_diagram.png
 packages_class_diagram.png
 logs/
 output/
+mypy.ini
