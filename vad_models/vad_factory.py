@@ -20,8 +20,8 @@ def load_vad(output_dir, filename):
             chunk_size, overlap, sample_rate, output_dir, filename
         )
     elif vad_type == "silero":
-        return SileroVAD(chunk_size, overlap, sample_rate)
+        return SileroVAD(chunk_size, overlap, sample_rate, output_dir, filename)
     elif vad_type == "webrtc":
-        return WebRTCVAD(chunk_size, overlap, sample_rate)
+        return WebRTCVAD(chunk_size, overlap, sample_rate, output_dir, filename)
     else:
         raise ValueError(f"Unsupported VAD model: {vad_type}")

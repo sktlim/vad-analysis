@@ -15,9 +15,13 @@ class WebRTCVAD(VADBase):
         overlap: float,
         sample_rate: int,
         label_file_path: Optional[str] = None,
+        output_dir: Optional[str] = None,
+        filename: Optional[str] = None,
         aggressiveness: int = 2,
     ):
-        super().__init__(chunk_size, overlap, sample_rate, label_file_path)
+        super().__init__(
+            chunk_size, overlap, sample_rate, label_file_path, output_dir, filename
+        )
 
         # Initialize WebRTC VAD
         self.vad = webrtcvad.Vad(

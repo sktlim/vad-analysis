@@ -16,8 +16,12 @@ class SileroVAD(VADBase):
         overlap: float,
         sample_rate: int,
         label_file_path: Optional[str] = None,
+        output_dir: Optional[str] = None,
+        filename: Optional[str] = None,
     ):
-        super().__init__(chunk_size, overlap, sample_rate, label_file_path)
+        super().__init__(
+            chunk_size, overlap, sample_rate, label_file_path, output_dir, filename
+        )
 
         # Load Silero VAD model and initialize VADIterator
         self.model = load_silero_vad()
