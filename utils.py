@@ -6,15 +6,6 @@ from functools import wraps
 import numpy as np
 import soundfile as sf
 
-# Configure logging
-logging.basicConfig(
-    level=logging.INFO,
-    format="%(asctime)s - %(levelname)s - %(message)s",
-    handlers=[
-        logging.FileHandler("./logs/vad_run.log", mode="w"),
-    ],
-)
-
 
 def audio_stream_from_wav(file_path, chunk_size=5.0, overlap=1.0, sample_rate=16000):
     """
