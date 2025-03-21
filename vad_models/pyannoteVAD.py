@@ -18,8 +18,10 @@ class PyannoteStreamingVAD(VADBase):
         overlap: float,
         sample_rate: int,
         label_file_path: Optional[str] = None,
+        output_dir: Optional[str] = None,
+        filename: Optional[str] = None,
     ):
-        super().__init__(chunk_size, overlap, sample_rate, label_file_path)
+        super().__init__(chunk_size, overlap, sample_rate, label_file_path, output_dir, filename)
 
         with open("configs/vad_config.yaml", "r", encoding="UTF-8") as file:
             config = yaml.safe_load(file)

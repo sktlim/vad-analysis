@@ -12,6 +12,8 @@ from pyannote.core import Annotation, Segment, Timeline
 from pyannote.metrics.detection import DetectionAccuracy, DetectionErrorRate
 from sklearn.metrics import roc_auc_score
 
+from utils import setup_logger
+
 
 class VADType(str, Enum):
     SILERO = "silero"
@@ -46,6 +48,8 @@ class VADBase(ABC):
     overlap: float
     sample_rate: int
     label_file_path: Optional[str] = None
+    output_dir: Optional[str] = None
+    filename: Optional[str] = None
 
     detection_accuracy: float = 0.0
     detection_error_rate_value: float = 0.0
@@ -141,73 +145,58 @@ class VADBase(ABC):
             self.roc_auc,
         )
 
-    def log_vad(self, output_file_dir):
+    def log_vad(self):
         """
         Logs overall VAD results, runs metrics if labels exist, \
             and saves structured JSON.
         """
 
-        log_dir = os.path.join(output_file_dir, "logs")
-        logging.basicConfig(
-            level=logging.INFO,  # Adjust to DEBUG for more details
-            format="%(asctime)s - %(levelname)s - %(message)s",
-            handlers=[
-                logging.FileHandler(f"{log_dir}/vad_run.log", mode="w"),  # Log to file
-                logging.StreamHandler()
-            ],
-        )
+        vad_dir = os.path.join(self.output_dir, self.filename)
+        os.makedirs(vad_dir, exist_ok=True)
+
+        # Setup loggers
+        run_logger = setup_logger(vad_dir, "", "run_log")
 
         if self.label_file_path:
-            logging.info("Running VAD metric calculations...")
+            run_logger.info("Running VAD metric calculations...")
             self.calcMetrics()
         else:
-            logging.info("Empty ground truth or VAD labels")
-            self.aggregate_results()
+            run_logger.info("No label file provided. Skipping metric calculations.")
 
-        # Compute overall stats
-        total_chunks = len(self.chunk_logs)
-        avg_processing_time = (
-            sum(chunk["processing_time"] for chunk in self.chunk_logs) / total_chunks
-            if total_chunks
-            else 0
-        )
-        total_speech_duration = sum(
-            chunk["speech_duration"] for chunk in self.chunk_logs
-        )
-
-        overall_stats = {
-            "total_chunks_processed": total_chunks,
-            "total_runtime": round(
-                sum(chunk["processing_time"] for chunk in self.chunk_logs), 4
-            ),
-            "avg_processing_time_per_chunk": round(avg_processing_time, 4),
-            "total_speech_detected": round(total_speech_duration, 2),
-            "metrics": {
-                "detection_accuracy": round(self.detection_accuracy, 4),
-                "detection_error_rate": round(self.detection_error_rate_value, 4),
-                "missed_detection_rate": round(self.missed_detection_rate, 4),
-                "false_alarm_rate": round(self.false_alarm_rate, 4),
-                "roc_auc": (
-                    round(self.roc_auc, 4) if not np.isnan(self.roc_auc) else None
-                ),
-            },
-        }
-
+        # Compute final structured results
         structured_data = {
-            "overall_stats": overall_stats,
+            "overall_stats": {
+                "total_chunks_processed": len(self.chunk_logs),
+                "total_runtime": sum(
+                    chunk["processing_time"] for chunk in self.chunk_logs
+                ),
+                "avg_processing_time_per_chunk": sum(
+                    chunk["processing_time"] for chunk in self.chunk_logs
+                )
+                / max(len(self.chunk_logs), 1),
+                "total_speech_detected": sum(
+                    chunk["speech_duration"] for chunk in self.chunk_logs
+                ),
+                "metrics": {
+                    "detection_accuracy": self.detection_accuracy,
+                    "detection_error_rate": self.detection_error_rate_value,
+                    "missed_detection_rate": self.missed_detection_rate,
+                    "false_alarm_rate": self.false_alarm_rate,
+                    "roc_auc": self.roc_auc if not np.isnan(self.roc_auc) else None,
+                },
+            },
             "chunk_logs": self.chunk_logs,
         }
 
-        result_dir = os.path.join(output_file_dir, "results")
-        os.makedirs(result_dir, exist_ok=True)
-
-        # Save as JSON
-        json_path = os.path.join(result_dir, "vad_results.json")
+        # Save results as JSON
+        json_path = os.path.join(vad_dir, f"{self.filename}_results.json")
         with open(json_path, "w", encoding="utf-8") as json_file:
             json.dump(structured_data, json_file, indent=4)
 
-        # Save and save to LAB format
-        lab_path = os.path.join(result_dir, "vad_results.lab")
+        run_logger.info(f"Final structured logs saved: {json_path}")
+
+        # Save as .lab file
+        lab_path = os.path.join(vad_dir, f"{self.filename}.lab")
         with open(lab_path, "w", encoding="utf-8") as lab_file:
             for segment, _, label in self.vad_result.itertracks(yield_label=True):
                 start_time = segment.start
@@ -215,4 +204,16 @@ class VADBase(ABC):
                 label = label if label else "speech"
                 lab_file.write(f"{start_time:.3f} {end_time:.3f} {label}\n")
 
-        logging.info("Final structured logs saved: vad_results.json")
+        run_logger.info(f"VAD lab results saved: {lab_path}")
+    
+    def reset(self):
+        self.vad_segments.clear()
+        self.vad_result = Annotation()
+        self.current_offset = 0.0
+        self.chunk_logs.clear()
+
+        self.detection_accuracy = 0.0
+        self.detection_error_rate_value = 0.0
+        self.missed_detection_rate = 0.0
+        self.false_alarm_rate = 0.0
+        self.roc_auc = 0.0

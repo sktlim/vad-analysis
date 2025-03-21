@@ -1,4 +1,5 @@
 import logging
+import os
 import time
 from functools import wraps
 
@@ -88,21 +89,48 @@ def time_it(func):
         )
 
         # Per-chunk log entry
-        chunk_log = {
-            "chunk_start_time": round(self.current_offset, 2),
-            "processing_time": round(processing_time, 4),
-            "detected_speech_segments": speech_segments,
-            "speech_duration": round(total_speech_duration, 2),
-        }
-        self.chunk_logs.append(chunk_log)
+        log_entry = (
+            f"Chunk {self.current_offset:.2f}s | "
+            f"Processed in {processing_time:.4f}s | "
+            f"Detected Speech: {speech_segments if speech_segments else 'None'}"
+        )
 
-        # Log per-chunk details
-        logging.info(
-            "Chunk %.2fs | Processed in %.4fs | Detected Speech: %s",
-            chunk_log["chunk_start_time"],
-            chunk_log["processing_time"],
-            chunk_log["detected_speech_segments"] if speech_segments else "None",
+        timing_logger = setup_logger(self.output_dir, self.filename, "timing")
+        timing_logger.info(log_entry)
+
+        # Save log info
+        self.chunk_logs.append(
+            {
+                "chunk_start_time": round(self.current_offset, 2),
+                "processing_time": round(processing_time, 4),
+                "detected_speech_segments": speech_segments,
+                "speech_duration": round(total_speech_duration, 2),
+            }
         )
         return vad_annotation
 
     return wrapper
+
+
+def setup_logger(log_dir, filename, log_type):
+    """
+    Creates a logger for a specific type of logging (timing, memory, results).
+    """
+    log_path = os.path.join(log_dir, filename, f"{filename}_{log_type}.log")
+    os.makedirs(log_dir, exist_ok=True)
+
+    logger = logging.getLogger(f"{log_type}_{filename}")
+    logger.setLevel(logging.INFO)
+
+    if logger.hasHandlers():
+        logger.handlers.clear()
+
+    # Avoid duplicate handlers
+    file_handler = logging.FileHandler(log_path, mode="a")
+    formatter = logging.Formatter("%(asctime)s - %(levelname)s - %(message)s")
+    file_handler.setFormatter(formatter)
+    logger.addHandler(file_handler)
+
+    logger.propagate = False
+
+    return logger

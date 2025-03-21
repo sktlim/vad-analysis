@@ -5,7 +5,7 @@ from vad_models.sileroVAD import SileroVAD
 from vad_models.webrtc_vad import WebRTCVAD
 
 
-def load_vad():
+def load_vad(output_dir, filename):
     """Loads the VAD model specified in the config file"""
     with open("configs/vad_config.yaml", "r", encoding="utf-8") as f:
         config = yaml.safe_load(f)
@@ -16,7 +16,9 @@ def load_vad():
     sample_rate = config.get("sample_rate", 16000)
 
     if vad_type == "pyannote":
-        return PyannoteStreamingVAD(chunk_size, overlap, sample_rate)
+        return PyannoteStreamingVAD(
+            chunk_size, overlap, sample_rate, output_dir, filename
+        )
     elif vad_type == "silero":
         return SileroVAD(chunk_size, overlap, sample_rate)
     elif vad_type == "webrtc":
