@@ -35,8 +35,17 @@ class PyannoteStreamingVAD(VADBase):
         self.pipeline = VoiceActivityDetection(segmentation=self.model)
         self.pipeline.instantiate({"min_duration_on": 0.0, "min_duration_off": 0.0})
 
-        if torch.cuda.is_available():
-            self.pipeline.to(torch.device("cuda"))
+        self.frame_probabilities = []
+
+    def get_speech_probabilities(self, total_duration: float) -> np.ndarray:
+        expected_frames = int(total_duration / self.frame_duration)
+        padded_probs = np.pad(
+            self.frame_probabilities,
+            (0, max(0, expected_frames - len(self.frame_probabilities))),
+            mode="constant",
+            constant_values=0,
+        )
+        return padded_probs[:expected_frames]
 
     @time_it
     def process_audio_chunk(self, audio_chunk: np.ndarray) -> Annotation:
@@ -48,6 +57,13 @@ class PyannoteStreamingVAD(VADBase):
 
         input_dict = {"waveform": audio_tensor, "sample_rate": self.sample_rate}
         vad_result = self.pipeline(input_dict)
+
+        with torch.no_grad():
+            segmentation_scores = self.model(input_dict)  # shape: (1, frames, classes)
+            speech_probs = torch.sigmoid(segmentation_scores)[
+                0, :, 1
+            ].numpy()  # class 1 = speech
+            self.frame_probabilities.extend(speech_probs)
 
         adjusted_annotation = Annotation()
         for segment, _, label in vad_result.itertracks(yield_label=True):

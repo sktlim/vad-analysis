@@ -67,6 +67,10 @@ class VADBase(ABC):
     def process_audio_chunk(self, audio_chunk: np.ndarray) -> Annotation:
         pass
 
+    @abstractmethod
+    def get_speech_probabilities(self, total_duration: float) -> np.ndarray:
+        pass
+
     def aggregate_results(self):
         aggregated_timeline = Timeline()
         for vad_result in self.vad_segments:
@@ -122,18 +126,24 @@ class VADBase(ABC):
         ground_truth_labels = annotation_to_frame_labels(
             ground_truth, total_duration, self.frame_duration
         )
-        vad_labels = annotation_to_frame_labels(
-            self.vad_result, total_duration, self.frame_duration
-        )
 
-        if len(ground_truth_labels) == 0 or len(vad_labels) == 0:
+        try:
+            vad_probabilities = self.get_speech_probabilities(total_duration)
+        except NotImplementedError:
+            logging.warning("get_speech_probabilities not implemented.")
+            vad_probabilities = None
+
+        if (
+            len(ground_truth_labels) == 0
+            or vad_probabilities is None
+            or len(vad_probabilities) == 0
+        ):
             logging.warning(
-                "Warning: Empty ground truth or VAD labels. \
-                    Skipping ROC-AUC calculation."
+                "Warning: Empty ground truth or VAD scores. Skipping ROC-AUC calculation."
             )
             self.roc_auc = float("nan")
         else:
-            self.roc_auc = roc_auc_score(ground_truth_labels, vad_labels)
+            self.roc_auc = roc_auc_score(ground_truth_labels, vad_probabilities)
 
         logging.info(
             "Metrics calculated - Accuracy: %.4f, \
