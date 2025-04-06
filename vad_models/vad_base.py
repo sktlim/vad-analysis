@@ -4,20 +4,13 @@ import os
 from abc import ABC, abstractmethod
 from collections import deque
 from dataclasses import dataclass, field
-from enum import Enum
 from typing import List, Optional
 
 import numpy as np
 from pyannote.core import Annotation, Segment, Timeline
 from pyannote.metrics.detection import DetectionAccuracy, DetectionErrorRate
-from sklearn.metrics import roc_auc_score
 
 from utils import setup_logger
-
-
-class VADType(str, Enum):
-    SILERO = "silero"
-    PYANNOTE = "pyannote"
 
 
 def load_lab_file(lab_file_path):
@@ -55,7 +48,6 @@ class VADBase(ABC):
     detection_error_rate_value: float = 0.0
     missed_detection_rate: float = 0.0
     false_alarm_rate: float = 0.0
-    roc_auc: float = 0.0
 
     vad_result: Annotation = field(default_factory=Annotation)
     vad_segments: deque[Annotation] = deque()
@@ -117,32 +109,13 @@ class VADBase(ABC):
             else 0
         )
 
-        # Compute ROC-AUC
-        total_duration = self.vad_result.get_timeline().extent().duration
-        ground_truth_labels = annotation_to_frame_labels(
-            ground_truth, total_duration, self.frame_duration
-        )
-        vad_labels = annotation_to_frame_labels(
-            self.vad_result, total_duration, self.frame_duration
-        )
-
-        if len(ground_truth_labels) == 0 or len(vad_labels) == 0:
-            logging.warning(
-                "Warning: Empty ground truth or VAD labels. \
-                    Skipping ROC-AUC calculation."
-            )
-            self.roc_auc = float("nan")
-        else:
-            self.roc_auc = roc_auc_score(ground_truth_labels, vad_labels)
-
         logging.info(
             "Metrics calculated - Accuracy: %.4f, \
-                DER: %.4f, Missed: %.4f, False Alarm: %.4f, ROC AUC: %.4f",
+                DER: %.4f, Missed: %.4f, False Alarm: %.4f",
             self.detection_accuracy,
             self.detection_error_rate_value,
             self.missed_detection_rate,
             self.false_alarm_rate,
-            self.roc_auc,
         )
 
     def log_vad(self):
@@ -182,7 +155,6 @@ class VADBase(ABC):
                     "detection_error_rate": self.detection_error_rate_value,
                     "missed_detection_rate": self.missed_detection_rate,
                     "false_alarm_rate": self.false_alarm_rate,
-                    "roc_auc": self.roc_auc if not np.isnan(self.roc_auc) else None,
                 },
             },
             "chunk_logs": self.chunk_logs,
@@ -205,7 +177,7 @@ class VADBase(ABC):
                 lab_file.write(f"{start_time:.3f} {end_time:.3f} {label}\n")
 
         run_logger.info(f"VAD lab results saved: {lab_path}")
-    
+
     def reset(self):
         self.vad_segments.clear()
         self.vad_result = Annotation()
@@ -216,4 +188,3 @@ class VADBase(ABC):
         self.detection_error_rate_value = 0.0
         self.missed_detection_rate = 0.0
         self.false_alarm_rate = 0.0
-        self.roc_auc = 0.0

@@ -7,6 +7,7 @@ from pynvml import nvmlDeviceGetHandleByIndex, nvmlDeviceGetMemoryInfo, nvmlInit
 
 from utils import audio_stream_from_wav, setup_logger
 from vad_models.vad_factory import load_vad
+from tqdm import tqdm
 
 
 def load_config(config_path="configs/vad_config.yaml"):
@@ -55,7 +56,7 @@ def main():
 
     audio_files = sorted(glob(os.path.join(input_audio_dir, "*.flac")))
 
-    for audio_file in audio_files:
+    for audio_file in tqdm(audio_files):
         filename = os.path.basename(audio_file).replace(".flac", "")
         lab_file = os.path.join(lab_files_dir, f"{filename}.lab")
         vad_class = load_vad(output_files_dir, filename)
@@ -63,7 +64,6 @@ def main():
 
         os.makedirs(os.path.join(output_files_dir, filename), exist_ok=True)
 
-        print(f"Processing {audio_file} with label {lab_file}")
         vad_class.output_dir = output_files_dir
         vad_class.filename = filename
 
