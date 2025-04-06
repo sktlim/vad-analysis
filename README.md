@@ -64,11 +64,13 @@ Ensure you have the following installed:
 
 1. **Prepare Your Audio Data**:
 
-   Place your input audio files in the designated directory as specified in your configuration.
+   Place your input audio files and label files (if any) in your designated directories.
 
 2. **Configure Settings**:
 
-   Create your own config file named `vad_config.yaml` in the `configs` directory similar to that in `sample_config.yaml` and adjust the parameters to match your analysis requirements.
+   Create your own config file named `vad_config.yaml` in the `configs` directory. Refer to the sample config in `sample_config.yaml` and adjust the parameters to match your analysis requirements.
+
+   NOTE: The script will not run if no `vad_config.yaml` file is found.
 
 3. **Run the Main Script**:
 
