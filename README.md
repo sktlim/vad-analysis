@@ -89,5 +89,4 @@ Ensure you have the following installed:
 - `vad_models/`: Includes pre-trained VAD models and related scripts.
 - `main.py`: The main script to initiate VAD analysis.
 - `utils.py`: Utility functions to support the analysis process.
-- `Dockerfile`: Instructions to create a Docker container for the project.
 - `environment.yml`: Lists the dependencies required for the project.
